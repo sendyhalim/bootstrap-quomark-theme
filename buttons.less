@@ -1,0 +1,40 @@
+@import "generic.less";
+
+@btn-margin-top: 2px;
+@btn-margin-bottom: 2px;
+@btn-min-width: 34px;
+@btn-min-height: 28px;
+@btn-padding-left: 6px;
+@btn-padding-right: 6px;
+@btn-padding-bottom: 2px;
+@btn-padding-top: 3px;
+@font-bold: bold;
+@btn-border-radius: 2px;
+
+.BtnTransition(@colorTransition: 0.5s, @backgroundColorTransition: 0.5s){
+	-webkit-transition: @colorTransition color, @backgroundColorTransition background-color;
+	-o-transition: 		@colorTransition color, @backgroundColorTransition background-color;
+	transition: 		@colorTransition color, @backgroundColorTransition background-color;
+}
+.btn {
+	margin-top: @btn-margin-top;
+	margin-bottom: @btn-margin-bottom;
+	min-width: @btn-min-width;
+	min-height: @btn-min-height;
+	padding: @btn-padding-bottom @btn-padding-left;
+	padding-top: @btn-padding-top;
+	font-weight: @font-bold;
+    .NoBorder;
+    border-radius: @btn-border-radius;
+    -webkit-border-radius: @btn-border-radius;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.open .dropdown-toggle.btn{
+	position: relative;
+	.NoOutline;
+	.NoShadow;
+}

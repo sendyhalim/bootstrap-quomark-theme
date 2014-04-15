@@ -1,0 +1,32 @@
+.NoBorder {
+  border: none;
+}
+.NoOutline {
+  outline: none;
+}
+.NoShadow {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  min-width: 34px;
+  min-height: 28px;
+  padding: 2px 6px;
+  padding-top: 3px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.open .dropdown-toggle.btn {
+  position: relative;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
