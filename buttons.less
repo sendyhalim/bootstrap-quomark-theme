@@ -1,15 +1,62 @@
 @import "generic.less";
 
-@btn-margin-top: 2px;
-@btn-margin-bottom: 2px;
-@btn-min-width: 34px;
-@btn-min-height: 28px;
-@btn-padding-left: 6px;
-@btn-padding-right: 6px;
-@btn-padding-bottom: 2px;
-@btn-padding-top: 3px;
-@font-bold: bold;
-@btn-border-radius: 2px;
+/**
+ * BASIC BUTTON VARIABLES
+ */
+@btnMarginTop: 2px;
+@btnMarginBottom: 2px;
+@btnMinWidth: 34px;
+@btnMinHeight: 28px;
+@btnHorizontalPadding: 6px;
+@btnVerticalPadding: 2px;
+@btnPaddingTop: 3px;
+@btnBorderRadius: 2px;
+@btnShadowSize: 0 1px;
+@btnTopPositionWhenHovered: 1px;
+
+/**
+ * BUTTONS COLOR VARIABLES
+ */
+@defaultBackgroundBaseColor: #EFEFEF;
+@defaultShadowColor: #DDEEDD;
+
+@infoBackgroundBaseColor: #217FD2;
+@infoShadowColor: #224DA3;
+
+@successBackgroundBaseColor: #3A8B3B;
+@successShadowColor: #3D563C;
+
+@warningBackgroundBaseColor: #C15AB1;
+@warningShadowColor: #A34A95;
+
+@dangerBackgroundBaseColor: #D9534F;
+@dangerShadowColor: #A64A38;
+
+.btn-default{
+	background-color: @defaultBackgroundBaseColor;
+	-webkit-box-shadow: @btnShadowSize @defaultShadowColor;
+	box-shadow: @btnShadowSize @defaultShadowColor;
+}
+.btn-info {
+    background-color: @infoBackgroundBaseColor;
+    -webkit-box-shadow: @btnShadowSize @infoShadowColor;
+    box-shadow: @btnShadowSize @infoShadowColor;
+}
+.btn-success{
+	background-color: @successBackgroundBaseColor;
+	-webkit-box-shadow: @btnShadowSize @successShadowColor;
+	box-shadow: @btnShadowSize @successShadowColor;
+}
+.btn-warning{
+	background-color: @warningBackgroundBaseColor;
+	-webkit-box-shadow: @btnShadowSize @warningShadowColor;
+	box-shadow: @btnShadowSize @warningShadowColor;
+}
+.btn-danger{
+	background-color: @dangerBackgroundBaseColor;
+	-webkit-box-shadow: @btnShadowSize @dangerShadowColor;
+	box-shadow: @btnShadowSize @dangerShadowColor;
+}
 
 .BtnTransition(@colorTransition: 0.5s, @backgroundColorTransition: 0.5s){
 	-webkit-transition: @colorTransition color, @backgroundColorTransition background-color;
@@ -17,16 +64,16 @@
 	transition: 		@colorTransition color, @backgroundColorTransition background-color;
 }
 .btn {
-	margin-top: @btn-margin-top;
-	margin-bottom: @btn-margin-bottom;
-	min-width: @btn-min-width;
-	min-height: @btn-min-height;
-	padding: @btn-padding-bottom @btn-padding-left;
-	padding-top: @btn-padding-top;
-	font-weight: @font-bold;
+	.BoldFont;
     .NoBorder;
-    border-radius: @btn-border-radius;
-    -webkit-border-radius: @btn-border-radius;
+	margin-top: @btnMarginTop;
+	margin-bottom: @btnMarginBottom;
+	min-width: @btnMinWidth;
+	min-height: @btnMinHeight;
+	padding: @btnVerticalPadding @btnHorizontalPadding;
+	padding-top: @btnPaddingTop;
+    border-radius: @btnBorderRadius;
+    -webkit-border-radius: @btnBorderRadius;
 }
 
 .btn:hover,
@@ -35,6 +82,7 @@
 .btn.active,
 .open .dropdown-toggle.btn{
 	position: relative;
+	top: @btnTopPositionWhenHovered;
 	.NoOutline;
 	.NoShadow;
 }

@@ -8,15 +8,49 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.BoldFont {
+  font-weight: bold;
+}
+/**
+ * BASIC BUTTON VARIABLES
+ */
+/**
+ * BUTTONS COLOR VARIABLES
+ */
+.btn-default {
+  background-color: #efefef;
+  -webkit-box-shadow: 0 1px #ddeedd;
+  box-shadow: 0 1px #ddeedd;
+}
+.btn-info {
+  background-color: #217fd2;
+  -webkit-box-shadow: 0 1px #224da3;
+  box-shadow: 0 1px #224da3;
+}
+.btn-success {
+  background-color: #3a8b3b;
+  -webkit-box-shadow: 0 1px #3d563c;
+  box-shadow: 0 1px #3d563c;
+}
+.btn-warning {
+  background-color: #c15ab1;
+  -webkit-box-shadow: 0 1px #a34a95;
+  box-shadow: 0 1px #a34a95;
+}
+.btn-danger {
+  background-color: #d9534f;
+  -webkit-box-shadow: 0 1px #a64a38;
+  box-shadow: 0 1px #a64a38;
+}
 .btn {
+  font-weight: bold;
+  border: none;
   margin-top: 2px;
   margin-bottom: 2px;
   min-width: 34px;
   min-height: 28px;
   padding: 2px 6px;
   padding-top: 3px;
-  font-weight: bold;
-  border: none;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
@@ -26,6 +60,7 @@
 .btn.active,
 .open .dropdown-toggle.btn {
   position: relative;
+  top: 1px;
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
