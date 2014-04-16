@@ -5,7 +5,7 @@
   border: none;
 }
 .NoOutline {
-  outline: none;
+  outline: 0 !important;
 }
 .NoShadow {
   -webkit-box-shadow: none;
@@ -17,8 +17,13 @@
 /**
  * BASIC BUTTON VARIABLES
  */
+.BtnBehavior {
+  outline: 0 !important;
+  border: none;
+}
 .btn {
   font-weight: bold;
+  outline: 0 !important;
   border: none;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -36,9 +41,12 @@
 .open .dropdown-toggle.btn {
   position: relative;
   top: 1px;
-  outline: none;
+  outline: 0 !important;
   -webkit-box-shadow: none;
   box-shadow: none;
+  -webkit-transition: 0.5s color, 0.5s background-color;
+  -o-transition: 0.5s color, 0.5s background-color;
+  transition: 0.5s color, 0.5s background-color;
 }
 .btn-default {
   background-color: #efefef;

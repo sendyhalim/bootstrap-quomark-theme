@@ -3,25 +3,26 @@
  */
 @fontColorOnDark: #FFFFFF;
 @fontColorOnLight: #222222;
+@darkenPercentage: 10%;
 
 @defaultBackgroundColor: #EFEFEF;
-@defaultDarkenBackgroundColor: darken(@defaultBackgroundColor, 10%);
+@defaultDarkenBackgroundColor: darken(@defaultBackgroundColor, @darkenPercentage);
 @defaultShadowColor: #DDEEDD;
 
 @infoBackgroundColor: #217FD2;
-@infoDarkenBackgroundColor: darken(@infoBackgroundColor, 10%);
+@infoDarkenBackgroundColor: darken(@infoBackgroundColor, @darkenPercentage);
 @infoShadowColor: #224DA3;
 
 @successBackgroundColor: #3A8B3B;
-@successDarkenBackgroundColor: darken(@successBackgroundColor, 10%);
+@successDarkenBackgroundColor: darken(@successBackgroundColor, @darkenPercentage);
 @successShadowColor: #3D563C;
 
 @warningBackgroundColor: #C15AB1;
-@warningDarkenBackgroundColor: darken(@warningBackgroundColor, 10%);
+@warningDarkenBackgroundColor: darken(@warningBackgroundColor, @darkenPercentage);
 @warningShadowColor: #A34A95;
 
 @dangerBackgroundColor: #D9534F;
-@dangerDarkenBackgroundColor: darken(@dangerBackgroundColor, 10%);
+@dangerDarkenBackgroundColor: darken(@dangerBackgroundColor, @darkenPercentage);
 @dangerShadowColor: #A64A38;
 
 
@@ -29,7 +30,7 @@
 	border: none;
 }
 .NoOutline{
-	outline: none;
+	outline: 0 !important;
 }
 .NoShadow{
 	-webkit-box-shadow: none;
