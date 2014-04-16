@@ -1,0 +1,47 @@
+@import "generic.less";
+
+@progressBarShadowSize: inset 0 -1px 0;
+@progressBarRadius: 0;
+@progressBackgroundColor: #EFFFEF;
+
+.ProgressBarShadow(@baseColor) {
+	-webkit-box-shadow: @progressBarShadowSize rgba(red(@baseColor), green(@baseColor), blue(@baseColor), 1);
+			box-shadow: @progressBarShadowSize rgba(red(@baseColor), green(@baseColor), blue(@baseColor), 1);
+}
+
+.progress{
+	-webkit-border-radius: @progressBarRadius;
+			border-radius: @progressBarRadius;
+}
+.progress{
+	background-color: @progressBackgroundColor;
+}
+.progress .progress-bar{
+	border-radius: @progressBarRadius;
+	border-top-right-radius: 9999px;
+	border-bottom-right-radius: 9999px;
+}
+.progress .progress-bar[aria-valuenow="100"]{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.progress-bar-default{
+	background-color: @defaultBackgroundColor;
+	.ProgressBarShadow(@defaultShadowColor);
+}
+.progress-bar-info{
+	background-color: @infoBackgroundColor;
+	.ProgressBarShadow(@infoShadowColor);
+}
+.progress-bar-success{
+	background-color: @successBackgroundColor;
+	.ProgressBarShadow(@successShadowColor);
+}
+.progress-bar-warning{
+	background-color: @warningBackgroundColor;
+	.ProgressBarShadow(@warningShadowColor);
+}
+.progress-bar-danger{
+	background-color: @dangerBackgroundColor;
+	.ProgressBarShadow(@dangerBackgroundColor);
+}

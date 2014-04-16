@@ -4,26 +4,27 @@
 @fontColorOnDark: #FFFFFF;
 @fontColorOnLight: #222222;
 @darkenPercentage: 10%;
+@darkenShadowPercentage: 20%;
 
 @defaultBackgroundColor: #EFEFEF;
 @defaultDarkenBackgroundColor: darken(@defaultBackgroundColor, @darkenPercentage);
-@defaultShadowColor: #DDEEDD;
+@defaultShadowColor: darken(@defaultBackgroundColor, @darkenShadowPercentage);
 
 @infoBackgroundColor: #217FD2;
 @infoDarkenBackgroundColor: darken(@infoBackgroundColor, @darkenPercentage);
-@infoShadowColor: #224DA3;
+@infoShadowColor: darken(@infoBackgroundColor, @darkenShadowPercentage);
 
 @successBackgroundColor: #3A8B3B;
 @successDarkenBackgroundColor: darken(@successBackgroundColor, @darkenPercentage);
-@successShadowColor: #3D563C;
+@successShadowColor: darken(@successBackgroundColor, @darkenShadowPercentage);
 
 @warningBackgroundColor: #C15AB1;
 @warningDarkenBackgroundColor: darken(@warningBackgroundColor, @darkenPercentage);
-@warningShadowColor: #A34A95;
+@warningShadowColor: darken(@warningBackgroundColor, @darkenShadowPercentage);
 
 @dangerBackgroundColor: #D9534F;
 @dangerDarkenBackgroundColor: darken(@dangerBackgroundColor, @darkenPercentage);
-@dangerShadowColor: #A64A38;
+@dangerShadowColor: darken(@dangerBackgroundColor, @darkenShadowPercentage);
 
 
 .NoBorder{
