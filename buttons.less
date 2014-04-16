@@ -14,6 +14,10 @@
 @btnShadowSize: 0 1px;
 @btnTopPositionWhenHovered: 1px;
 
+.BtnBehavior{
+	.NoOutline;
+	.NoBorder;
+}
 .BtnTransition(@colorTransition: 0.5s, @backgroundColorTransition: 0.5s){
 	-webkit-transition: @colorTransition color, @backgroundColorTransition background-color;
 	-o-transition: 		@colorTransition color, @backgroundColorTransition background-color;
@@ -21,7 +25,7 @@
 }
 .btn {
 	.BoldFont;
-    .NoBorder;
+    .BtnBehavior;
 	margin-top: @btnMarginTop;
 	margin-bottom: @btnMarginBottom;
 	min-width: @btnMinWidth;
@@ -41,6 +45,7 @@
 	top: @btnTopPositionWhenHovered;
 	.NoOutline;
 	.NoShadow;
+	.BtnTransition;
 }
 
 .btn-default{
