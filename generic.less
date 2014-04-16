@@ -1,20 +1,29 @@
 /**
  * COLORS
  */
-@defaultBackgroundBaseColor: #EFEFEF;
+@fontColorOnDark: #FFFFFF;
+@fontColorOnLight: #222222;
+
+@defaultBackgroundColor: #EFEFEF;
+@defaultDarkenBackgroundColor: darken(@defaultBackgroundColor, 10%);
 @defaultShadowColor: #DDEEDD;
 
-@infoBackgroundBaseColor: #217FD2;
+@infoBackgroundColor: #217FD2;
+@infoDarkenBackgroundColor: darken(@infoBackgroundColor, 10%);
 @infoShadowColor: #224DA3;
 
-@successBackgroundBaseColor: #3A8B3B;
+@successBackgroundColor: #3A8B3B;
+@successDarkenBackgroundColor: darken(@successBackgroundColor, 10%);
 @successShadowColor: #3D563C;
 
-@warningBackgroundBaseColor: #C15AB1;
+@warningBackgroundColor: #C15AB1;
+@warningDarkenBackgroundColor: darken(@warningBackgroundColor, 10%);
 @warningShadowColor: #A34A95;
 
-@dangerBackgroundBaseColor: #D9534F;
+@dangerBackgroundColor: #D9534F;
+@dangerDarkenBackgroundColor: darken(@dangerBackgroundColor, 10%);
 @dangerShadowColor: #A64A38;
+
 
 .NoBorder{
 	border: none;

@@ -14,32 +14,6 @@
 @btnShadowSize: 0 1px;
 @btnTopPositionWhenHovered: 1px;
 
-.btn-default{
-	background-color: @defaultBackgroundBaseColor;
-	-webkit-box-shadow: @btnShadowSize @defaultShadowColor;
-	box-shadow: @btnShadowSize @defaultShadowColor;
-}
-.btn-info {
-    background-color: @infoBackgroundBaseColor;
-    -webkit-box-shadow: @btnShadowSize @infoShadowColor;
-    box-shadow: @btnShadowSize @infoShadowColor;
-}
-.btn-success{
-	background-color: @successBackgroundBaseColor;
-	-webkit-box-shadow: @btnShadowSize @successShadowColor;
-	box-shadow: @btnShadowSize @successShadowColor;
-}
-.btn-warning{
-	background-color: @warningBackgroundBaseColor;
-	-webkit-box-shadow: @btnShadowSize @warningShadowColor;
-	box-shadow: @btnShadowSize @warningShadowColor;
-}
-.btn-danger{
-	background-color: @dangerBackgroundBaseColor;
-	-webkit-box-shadow: @btnShadowSize @dangerShadowColor;
-	box-shadow: @btnShadowSize @dangerShadowColor;
-}
-
 .BtnTransition(@colorTransition: 0.5s, @backgroundColorTransition: 0.5s){
 	-webkit-transition: @colorTransition color, @backgroundColorTransition background-color;
 	-o-transition: 		@colorTransition color, @backgroundColorTransition background-color;
@@ -68,3 +42,81 @@
 	.NoOutline;
 	.NoShadow;
 }
+
+.btn-default{
+	background-color: @defaultBackgroundColor;
+	-webkit-box-shadow: @btnShadowSize @defaultShadowColor;
+	box-shadow: @btnShadowSize @defaultShadowColor;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default{
+	background-color: @defaultDarkenBackgroundColor;
+	color: @fontColorOnLight;
+	.NoBorder;
+}
+
+.btn-info {
+    background-color: @infoBackgroundColor;
+    -webkit-box-shadow: @btnShadowSize @infoShadowColor;
+    box-shadow: @btnShadowSize @infoShadowColor;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info{
+	background-color: @infoDarkenBackgroundColor;
+	color: @fontColorOnDark;
+	.NoBorder;
+}
+
+.btn-success{
+	background-color: @successBackgroundColor;
+	-webkit-box-shadow: @btnShadowSize @successShadowColor;
+	box-shadow: @btnShadowSize @successShadowColor;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success{
+	background-color: @successDarkenBackgroundColor;
+	color: @fontColorOnDark;
+	.NoBorder;
+}
+
+.btn-warning{
+	background-color: @warningBackgroundColor;
+	-webkit-box-shadow: @btnShadowSize @warningShadowColor;
+	box-shadow: @btnShadowSize @warningShadowColor;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning{
+	background-color: @warningDarkenBackgroundColor;
+	color: @fontColorOnDark;
+	.NoBorder;
+}
+
+.btn-danger{
+	background-color: @dangerBackgroundColor;
+	-webkit-box-shadow: @btnShadowSize @dangerShadowColor;
+	box-shadow: @btnShadowSize @dangerShadowColor;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger{
+	background-color: @dangerDarkenBackgroundColor;
+	color: @fontColorOnDark;
+	.NoBorder;
+}
+
+
+
