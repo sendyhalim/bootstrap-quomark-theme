@@ -183,6 +183,21 @@
   color: #ffffff;
   border: none;
 }
+.btn-light-blue {
+  background-color: #33b5e5;
+  -webkit-box-shadow: 0 1px #1dade2;
+  box-shadow: 0 1px #1dade2;
+  color: #ffffff;
+}
+.btn-light-blue:hover,
+.btn-light-blue:focus,
+.btn-light-blue:active,
+.btn-light-blue.active,
+.open .dropdown-toggle.btn-light-blue {
+  background-color: #1a9bcb;
+  color: #ffffff;
+  border: none;
+}
 .progress {
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -237,6 +252,11 @@
   background-color: #59cab1;
   -webkit-box-shadow: inset 0 -1px 0 rgba(89, 202, 177, 0.3);
   box-shadow: inset 0 -1px 0 rgba(89, 202, 177, 0.3);
+}
+.progress-bar-light-blue {
+  background-color: #33b5e5;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(51, 181, 229, 0.3);
+  box-shadow: inset 0 -1px 0 rgba(51, 181, 229, 0.3);
 }
 .popover.fade {
   border: none;
