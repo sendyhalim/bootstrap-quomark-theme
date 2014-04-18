@@ -52,6 +52,7 @@
 	background-color: @defaultBackgroundColor;
 	-webkit-box-shadow: @btnShadowSize @defaultShadowColor;
 	box-shadow: @btnShadowSize @defaultShadowColor;
+	color: @darkFont;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -59,7 +60,7 @@
 .btn-default.active,
 .open .dropdown-toggle.btn-default{
 	background-color: @defaultDarkenBackgroundColor;
-	color: @fontColorOnLight;
+	color: @darkFont;
 	.NoBorder;
 }
 
@@ -67,6 +68,7 @@
     background-color: @infoBackgroundColor;
     -webkit-box-shadow: @btnShadowSize @infoShadowColor;
     box-shadow: @btnShadowSize @infoShadowColor;
+    color: @lightFont;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -74,7 +76,7 @@
 .btn-info.active,
 .open .dropdown-toggle.btn-info{
 	background-color: @infoDarkenBackgroundColor;
-	color: @fontColorOnDark;
+	color: @lightFont;
 	.NoBorder;
 }
 
@@ -82,6 +84,7 @@
 	background-color: @successBackgroundColor;
 	-webkit-box-shadow: @btnShadowSize @successShadowColor;
 	box-shadow: @btnShadowSize @successShadowColor;
+	color: @lightFont;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -89,7 +92,7 @@
 .btn-success.active,
 .open .dropdown-toggle.btn-success{
 	background-color: @successDarkenBackgroundColor;
-	color: @fontColorOnDark;
+	color: @lightFont;
 	.NoBorder;
 }
 
@@ -97,6 +100,7 @@
 	background-color: @warningBackgroundColor;
 	-webkit-box-shadow: @btnShadowSize @warningShadowColor;
 	box-shadow: @btnShadowSize @warningShadowColor;
+	color: @lightFont;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -104,7 +108,7 @@
 .btn-warning.active,
 .open .dropdown-toggle.btn-warning{
 	background-color: @warningDarkenBackgroundColor;
-	color: @fontColorOnDark;
+	color: @lightFont;
 	.NoBorder;
 }
 
@@ -112,6 +116,7 @@
 	background-color: @dangerBackgroundColor;
 	-webkit-box-shadow: @btnShadowSize @dangerShadowColor;
 	box-shadow: @btnShadowSize @dangerShadowColor;
+	color: @lightFont;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -119,6 +124,22 @@
 .btn-danger.active,
 .open .dropdown-toggle.btn-danger{
 	background-color: @dangerDarkenBackgroundColor;
-	color: @fontColorOnDark;
+	color: @lightFont;
+	.NoBorder;
+}
+
+.btn-black{
+	background-color: @blackBackgroundColor;
+	-webkit-box-shadow: @btnShadowSize @blackShadowColor;
+	box-shadow: @btnShadowSize @blackShadowColor;
+	color: @lightFont;
+}
+.btn-black:hover,
+.btn-black:focus,
+.btn-black:active,
+.btn-black.active,
+.open .dropdown-toggle.btn-black{
+	background-color: @blackDarkenBackgroundColor;
+	color: @lightFont;
 	.NoBorder;
 }
