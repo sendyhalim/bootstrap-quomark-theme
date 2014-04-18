@@ -266,6 +266,22 @@
   -webkit-border-radius: 0;
   border-radius: 0;
 }
+.popover-dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+.popover-dark.top > .arrow:after {
+  border-top-color: #333333;
+}
+.popover-dark.bottom > .arrow:after {
+  border-bottom-color: #333333;
+}
+.popover-dark.left > .arrow:after {
+  border-left-color: #333333;
+}
+.popover-dark.right > .arrow:after {
+  border-right-color: #333333;
+}
 .modal-content {
   border: none;
   -webkit-border-radius: 0;
