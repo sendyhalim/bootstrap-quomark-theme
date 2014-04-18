@@ -205,3 +205,18 @@
 	color: @lightFont;
 	.NoBorder;
 }
+
+.btn-dark-blue{
+	.BtnShadow(@darkBlueShadowColor);
+	background-color: @darkBlueBackgroundColor;
+	color: @lightFont;
+}
+.btn-dark-blue:hover,
+.btn-dark-blue:focus,
+.btn-dark-blue:active,
+.btn-dark-blue.active,
+.open .dropdown-toggle.btn-dark-blue{
+	background-color: @darkBlueDarkenBackgroundColor;
+	color: @lightFont;
+	.NoBorder;
+}
