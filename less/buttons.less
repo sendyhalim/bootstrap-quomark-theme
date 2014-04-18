@@ -3,6 +3,8 @@
 /**
  * BASIC BUTTON VARIABLES
  */
+@btnShadow: true;
+
 @btnMarginTop: 2px;
 @btnMarginBottom: 2px;
 @btnMinWidth: 34px;
@@ -23,6 +25,12 @@
 	-o-transition: 		@colorTransition color, @backgroundColorTransition background-color;
 	transition: 		@colorTransition color, @backgroundColorTransition background-color;
 }
+.BtnShadow(@shadowColor, @shadowSize: @btnShadowSize) when(@btnShadow) {
+	.Shadow(@shadowColor, @shadowSize);
+}
+.BtnPosition when(@btnShadow){
+	top: @btnTopPositionWhenHovered;
+}
 .btn {
 	.BoldFont;
     .BtnBehavior;
@@ -42,16 +50,15 @@
 .btn.active,
 .open .dropdown-toggle.btn{
 	position: relative;
-	top: @btnTopPositionWhenHovered;
+	.BtnPosition;
 	.NoOutline;
 	.NoShadow;
 	.BtnTransition;
 }
 
 .btn-default{
+	.BtnShadow(@defaultShadowColor);
 	background-color: @defaultBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @defaultShadowColor;
-	box-shadow: @btnShadowSize @defaultShadowColor;
 	color: @darkFont;
 }
 .btn-default:hover,
@@ -65,9 +72,8 @@
 }
 
 .btn-info {
+	.BtnShadow(@infoShadowColor);
     background-color: @infoBackgroundColor;
-    -webkit-box-shadow: @btnShadowSize @infoShadowColor;
-    box-shadow: @btnShadowSize @infoShadowColor;
     color: @lightFont;
 }
 .btn-info:hover,
@@ -81,9 +87,8 @@
 }
 
 .btn-success{
+	.BtnShadow(@successShadowColor);
 	background-color: @successBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @successShadowColor;
-	box-shadow: @btnShadowSize @successShadowColor;
 	color: @lightFont;
 }
 .btn-success:hover,
@@ -97,9 +102,8 @@
 }
 
 .btn-warning{
+	.BtnShadow(@warningShadowColor);
 	background-color: @warningBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @warningShadowColor;
-	box-shadow: @btnShadowSize @warningShadowColor;
 	color: @lightFont;
 }
 .btn-warning:hover,
@@ -113,9 +117,8 @@
 }
 
 .btn-danger{
+	.BtnShadow(@dangerShadowColor);
 	background-color: @dangerBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @dangerShadowColor;
-	box-shadow: @btnShadowSize @dangerShadowColor;
 	color: @lightFont;
 }
 .btn-danger:hover,
@@ -129,9 +132,8 @@
 }
 
 .btn-black{
+	.BtnShadow(@blackShadowColor);
 	background-color: @blackBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @blackShadowColor;
-	box-shadow: @btnShadowSize @blackShadowColor;
 	color: @lightFont;
 }
 .btn-black:hover,
@@ -145,9 +147,8 @@
 }
 
 .btn-orange{
+	.BtnShadow(@orangeShadowColor);
 	background-color: @orangeBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @orangeShadowColor;
-	box-shadow: @btnShadowSize @orangeShadowColor;
 	color: @lightFont;
 }
 .btn-orange:hover,
@@ -161,9 +162,8 @@
 }
 
 .btn-purple{
+	.BtnShadow(@purpleShadowColor);
 	background-color: @purpleBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @purpleShadowColor;
-	box-shadow: @btnShadowSize @purpleShadowColor;
 	color: @lightFont;
 }
 .btn-purple:hover,
@@ -177,9 +177,8 @@
 }
 
 .btn-cyan{
+	.BtnShadow(@cyanShadowColor);
 	background-color: @cyanBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @cyanShadowColor;
-	box-shadow: @btnShadowSize @cyanShadowColor;
 	color: @lightFont;
 }
 .btn-cyan:hover,
@@ -193,9 +192,8 @@
 }
 
 .btn-light-blue{
+	.BtnShadow(@lightBlueShadowColor);
 	background-color: @lightBlueBackgroundColor;
-	-webkit-box-shadow: @btnShadowSize @lightBlueShadowColor;
-	box-shadow: @btnShadowSize @lightBlueShadowColor;
 	color: @lightFont;
 }
 .btn-light-blue:hover,
