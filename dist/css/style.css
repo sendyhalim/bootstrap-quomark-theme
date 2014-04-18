@@ -461,6 +461,106 @@
   -webkit-border-radius: 0;
   border-radius: 0;
 }
+.modal-content.modal-default {
+  background-color: #efefef;
+  color: #222222;
+}
+.modal-content.modal-default .modal-header {
+  border-bottom: 1px solid #fcfcfc;
+}
+.modal-content.modal-default .modal-footer {
+  border-top: 1px solid #fcfcfc;
+}
+.modal-content.modal-info {
+  background-color: #217fd2;
+  color: #ffffff;
+}
+.modal-content.modal-info .modal-header {
+  border-bottom: 1px solid #2e8cde;
+}
+.modal-content.modal-info .modal-footer {
+  border-top: 1px solid #2e8cde;
+}
+.modal-content.modal-success {
+  background-color: #3a8b3b;
+  color: #ffffff;
+}
+.modal-content.modal-success .modal-header {
+  border-bottom: 1px solid #429d43;
+}
+.modal-content.modal-success .modal-footer {
+  border-top: 1px solid #429d43;
+}
+.modal-content.modal-warning {
+  background-color: #a7d024;
+  color: #ffffff;
+}
+.modal-content.modal-warning .modal-header {
+  border-bottom: 1px solid #b3dc32;
+}
+.modal-content.modal-warning .modal-footer {
+  border-top: 1px solid #b3dc32;
+}
+.modal-content.modal-danger {
+  background-color: #d9534f;
+  color: #ffffff;
+}
+.modal-content.modal-danger .modal-header {
+  border-bottom: 1px solid #de6764;
+}
+.modal-content.modal-danger .modal-footer {
+  border-top: 1px solid #de6764;
+}
+.modal-content.modal-orange {
+  background-color: #e8ac61;
+  color: #ffffff;
+}
+.modal-content.modal-orange .modal-header {
+  border-bottom: 1px solid #ebb877;
+}
+.modal-content.modal-orange .modal-footer {
+  border-top: 1px solid #ebb877;
+}
+.modal-content.modal-purple {
+  background-color: #c15ab1;
+  color: #ffffff;
+}
+.modal-content.modal-purple .modal-header {
+  border-bottom: 1px solid #c86dba;
+}
+.modal-content.modal-purple .modal-footer {
+  border-top: 1px solid #c86dba;
+}
+.modal-content.modal-cyan {
+  background-color: #59cab1;
+  color: #ffffff;
+}
+.modal-content.modal-cyan .modal-header {
+  border-bottom: 1px solid #6cd0ba;
+}
+.modal-content.modal-cyan .modal-footer {
+  border-top: 1px solid #6cd0ba;
+}
+.modal-content.modal-light-blue {
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+.modal-content.modal-light-blue .modal-header {
+  border-bottom: 1px solid #4abde8;
+}
+.modal-content.modal-light-blue .modal-footer {
+  border-top: 1px solid #4abde8;
+}
+.modal-content.modal-black {
+  background-color: #555555;
+  color: #ffffff;
+}
+.modal-content.modal-black .modal-header {
+  border-bottom: 1px solid #626262;
+}
+.modal-content.modal-black .modal-footer {
+  border-top: 1px solid #626262;
+}
 .colored-label {
   padding: 3px 7px;
 }
