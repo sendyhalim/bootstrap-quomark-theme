@@ -271,10 +271,46 @@
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.colored-label {
-  padding: 5px 10px;
+.colored-lable {
+  padding: 3px 7px;
 }
-.colored-label.label-success {
+.colored-lable.lable-default {
+  background-color: #efefef;
+  color: #222222;
+}
+.colored-lable.lable-success {
   background-color: #3a8b3b;
+  color: #ffffff;
+}
+.colored-lable.lable-info {
+  background-color: #217fd2;
+  color: #ffffff;
+}
+.colored-lable.lable-warning {
+  background-color: #a7d024;
+  color: #ffffff;
+}
+.colored-lable.lable-danger {
+  background-color: #d9534f;
+  color: #ffffff;
+}
+.colored-lable.lable-black {
+  background-color: #333333;
+  color: #ffffff;
+}
+.colored-lable.lable-orange {
+  background-color: #e8ac61;
+  color: #ffffff;
+}
+.colored-lable.lable-purple {
+  background-color: #c15ab1;
+  color: #ffffff;
+}
+.colored-lable.lable-light-blue {
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+.colored-lable.lable-cyan {
+  background-color: #59cab1;
   color: #ffffff;
 }
