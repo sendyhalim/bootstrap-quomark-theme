@@ -1,0 +1,50 @@
+.prettyprinted{
+    background-color:#333;
+    font-family:"Menlo", "Monaco", "Consolas", monospace;
+    /*  max-height:450px;*/
+    overflow:auto;
+    padding:20px;
+    font-size:1em;
+    line-height:1.5em;
+    margin:32px 0;
+    white-space:pre;
+}
+
+.prettyprinted .com{
+    color:#969896
+}
+pre.prettyprinted,
+pre.prettyprinted ol{
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    word-break: normal;
+
+}
+.prettyprinted .lit{
+    color:#DE935F
+}
+
+.prettyprinted .pun,.prettyprinted .opn,.prettyprinted .clo{
+    color:#d9dcda
+}
+
+.prettyprinted .fun{
+    color:#DC322F
+}
+
+.prettyprinted .str,.prettyprinted .atv{
+    color:#B5BD68
+}
+
+.prettyprinted .kwd,.prettyprinted .linenums .tag{
+    color:#E85274
+}
+
+.prettyprinted .typ,.prettyprinted .atn,.prettyprinted .dec,.prettyprinted .var{
+    color:#81A2BE
+}
+
+.prettyprinted .pln{
+    color:#d9dcda
+}
