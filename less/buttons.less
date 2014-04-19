@@ -71,6 +71,21 @@
 	.NoBorder;
 }
 
+.btn-primary {
+	.BtnShadow(@primaryShadowColor);
+    background-color: @primaryBackgroundColor;
+    color: @lightFont;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary{
+	background-color: @primaryDarkenBackgroundColor;
+	color: @lightFont;
+	.NoBorder;
+}
+
 .btn-info {
 	.BtnShadow(@infoShadowColor);
     background-color: @infoBackgroundColor;
