@@ -12,9 +12,10 @@
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="./bootstrap-3.1.1-dist/css/bootstrap.css">
-		<link rel="stylesheet" href="./pretty-print/themes/tomorrow.css">
 		<link rel="stylesheet" href="../dist/css/style.css">
+		<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/tomorrow-night.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 		<title>
 			Quomark theme css
 		</title>
@@ -109,7 +110,6 @@
 
 		<script src="./jquery.js"></script>
 		<script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script>
 			var filesToBeIncluded = [
 				'./partials/buttons.html',
@@ -119,7 +119,7 @@
 				'./partials/modals.html',
 				'./partials/alerts.html',
 			];
-
+			var totalFiles = filesToBeIncluded.length;
 			var currentIndex = 0;
 
 			$('<div></div>').load(filesToBeIncluded[currentIndex], function(response)
@@ -135,7 +135,17 @@
 				{
 					$('#start-partials').append(response);
 					++currentIndex;
-					load_partials(filesToBeIncluded[currentIndex])
+					// if there are more files
+					if (currentIndex < totalFiles)
+					{
+						load_partials(filesToBeIncluded[currentIndex])
+					}
+					// no more files to be loaded
+					else
+					{
+					  hljs.configure({tabReplace: '  '});
+					  $('pre.highlight-js').each(function(i, e) {hljs.highlightBlock(e)});
+					}
 				});
 			}
 
