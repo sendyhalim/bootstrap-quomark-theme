@@ -632,6 +632,21 @@ $('[data-toggle=popover]').popover({
 		<script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script>
+			var filesToBeIncluded = [
+				'./buttons.html'
+			];
+
+			var totalFile = filesToBeIncluded.length;
+			for(var i = 0; i < totalFile; i++)
+			{
+				$.get(filesToBeIncluded[i], {
+					done: function(response)
+					{
+						console.log(response);
+					}
+				});
+			}
+
 			$('[data-toggle=popover]').on('mousedown', function(event)
 			{
 				// cache
