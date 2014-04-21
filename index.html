@@ -120,7 +120,7 @@
 				'./partials/alerts.html',
 			];
 
-
+			var totalFiles = filesToBeIncluded.length;
 			var currentIndex = 0;
 
 			$('<div></div>').load(filesToBeIncluded[currentIndex], function(response)
@@ -136,7 +136,17 @@
 				{
 					$('#start-partials').append(response);
 					++currentIndex;
-					load_partials(filesToBeIncluded[currentIndex])
+					// if there are more files
+					if (currentIndex < totalFiles)
+					{
+						load_partials(filesToBeIncluded[currentIndex])
+					}
+					// no more files to be loaded
+					else
+					{
+					  hljs.configure({tabReplace: '  '});
+					  $('pre.highlight-js').each(function(i, e) {hljs.highlightBlock(e)});
+					}
 				});
 			}
 
