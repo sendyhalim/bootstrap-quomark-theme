@@ -120,12 +120,22 @@
 				'./partials/alerts.html',
 			];
 
-			var totalFile = filesToBeIncluded.length;
-			for(var i = 0; i < totalFile; i++)
+			var currentIndex = 0;
+
+			$('<div></div>').load(filesToBeIncluded[currentIndex], function(response)
 			{
-				$('<div></div>').load(filesToBeIncluded[i], function(response)
+				$('#start-partials').append(response);
+				++currentIndex;
+				load_partials(filesToBeIncluded[currentIndex]);
+			});
+
+			function load_partials(file)
+			{
+				$('<div></div>').load(file, function(response)
 				{
 					$('#start-partials').append(response);
+					++currentIndex;
+					load_partials(filesToBeIncluded[currentIndex])
 				});
 			}
 
