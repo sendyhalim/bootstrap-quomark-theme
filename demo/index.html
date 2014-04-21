@@ -125,6 +125,7 @@
 				'./partials/modals.html',
 				'./partials/alerts.html',
 			];
+
 			var totalFiles = filesToBeIncluded.length;
 			var currentIndex = 0;
 
@@ -149,33 +150,37 @@
 					// no more files to be loaded
 					else
 					{
-					  hljs.configure({tabReplace: '  '});
-					  $('pre.highlight-js').each(function(i, e) {hljs.highlightBlock(e)});
+						init();
+						hljs.configure({tabReplace: '  '});
+						$('pre.highlight-js').each(function(i, e) {hljs.highlightBlock(e)});
 					}
 				});
 			}
 
-			$('[data-toggle=popover]').on('mousedown', function(event)
+			function init()
 			{
-				// cache
-				var className = $(this).attr('class');
-				// get the color name from btn class
-				var color = className.substr(8, className.indexOf('popover') - 8).replace(/\s+/g, ' ');
+				$('[data-toggle=popover]').on('mousedown', function(event)
+				{
+					// cache
+					var className = $(this).attr('class');
+					// get the color name from btn class
+					var color = className.substr(8, className.indexOf('popover') - 8).replace(/\s+/g, ' ');
 
-				// assign the color to popover
-				$(this).popover({
-					template: '<div class="popover popover-'+color+'"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+					// assign the color to popover
+					$(this).popover({
+						template: '<div class="popover popover-'+color+'"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+					});
 				});
-			});
 
-			//cache the modal element
-			var modalContent = $('.modal-content');
-			$('[data-toggle=modal]').click(function(event)
-			{
-				var buttonClass = $(this).attr('class').substr(8);
-				//clean all classes
-				modalContent.attr('class', '');
-				modalContent.addClass('modal-content').addClass('modal-'+buttonClass);
-			});
+				//cache the modal element
+				var modalContent = $('.modal-content');
+				$('[data-toggle=modal]').click(function(event)
+				{
+					var buttonClass = $(this).attr('class').substr(8);
+					//clean all classes
+					modalContent.attr('class', '');
+					modalContent.addClass('modal-content').addClass('modal-'+buttonClass);
+				});
+			}
 		</script>
 </html>
