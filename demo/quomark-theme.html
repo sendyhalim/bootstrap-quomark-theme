@@ -12,7 +12,8 @@
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="./bootstrap-3.1.1-dist/css/bootstrap.css">
-		<link rel="stylesheet" href="/media/work/development/WebRoot/projects/css/quomark-theme/dist/css/style.css">
+		<link rel="stylesheet" href="./pretty-print/themes/tomorrow.css">
+		<link rel="stylesheet" href="../dist/css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<title>
 			Quomark theme css
@@ -21,13 +22,89 @@
 			body{
 				font-family: "Open sans", sans-serif;
 			}
+			.colored-label{
+				font-weight: bold;
+			}
 			.labels .label-container{
 				margin-top: 10px;
+			}
+			.available-colors .colored-label{
+				margin-right: 10px;
+			}
+			h1{
+				margin-top: 50px;
+			}
+			.m-top-20{
+				margin-top: 20px;
 			}
 		</style>
 	</head>
 
 	<body class="container">
+		<div class="info row">
+			<div class="col-md-12">
+				<h1>
+					Information
+				</h1>
+				<hr>
+			</div>
+			<div class="col-md-12">
+				<p>This theme is still in development, therefore only a few customizations has been made, but of course you can use it if you want :) !</p>
+				<p>Basically this theme adds more colors to bootstrap.</p>
+				<p>If you want to join the development, feel free to checkout <a href="https://github.com/sendyHalim/bootstrap-quomark-theme">this</a></p>
+			</div>
+		</div>
+		<!-- START INSTALLATION
+		==================================================================================== -->
+		<div class="documentation row">
+			<div class="col-md-12">
+				<h1>
+					Installation
+				</h1>
+				<hr>
+			</div>
+			<div class="col-md-12">
+				<h3>
+					This theme requires <a href="http://getbootstrap.com/">bootstrap</a> and <a href="http://jquery.com/">JQuery</a>
+				</h3>
+				<p>First download the theme package <a href="https://github.com/sendyHalim/bootstrap-quomark-theme/archive/master.zip">here</a></p>
+				<p>Then just include the style.css inside <code>dist/css/style.css</code>. <b>Be sure to include it after bootstrap.css</b></p>
+			</div>
+
+		</div>
+		<!-- ====================================================================================
+		     END INSTALLATION -->
+
+
+		<!-- START AVAILABLE COLORS
+		==================================================================================== -->
+		<div class="available-colors row">
+			<div class="col-md-12">
+				<h3>
+					Available Colors (There will be more colors)
+				</h3>
+				<hr>
+			</div>
+			<div class="col-md-12">
+				<p><span class="colored-label label-default"></span>Default</p>
+				<p><span class="colored-label label-primary"></span>Primary</p>
+				<p><span class="colored-label label-info"></span>Info</p>
+				<p><span class="colored-label label-success"></span>Success</p>
+				<p><span class="colored-label label-warning"></span>Warning</p>
+				<p><span class="colored-label label-danger"></span>Danger</p>
+				<p><span class="colored-label label-orange"></span>Orange</p>
+				<p><span class="colored-label label-purple"></span>Purple</p>
+				<p><span class="colored-label label-cyan"></span>Cyan</p>
+				<p><span class="colored-label label-light-blue"></span>Light blue</p>
+				<p><span class="colored-label label-dark-blue"></span>Dark blue</p>
+				<p><span class="colored-label label-black"></span>Black</p>
+			</div>
+		</div>
+
+
+		<!-- ====================================================================================
+		     END AVAILABLE COLORS -->
+
 		<!-- START BUTTONS
 		==================================================================================== -->
 		<div class="buttons row">
@@ -37,38 +114,58 @@
 				</h1>
 				<hr>
 			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-default">Default</button>
+			<div class="col-md-12">
+				<p>
+					Add class <code>btn-color</code>
+				</p>
+				<p>
+					For example I want to make a button with color cyan, I would make
+					<code>&lt;button class="btn btn-cyan"&gt;Submit&lt;/button&gt;</code>
+				</p>
 			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-info">Info</button>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row">
+						<button class="btn btn-default">Default</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-success">Success</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-danger">Danger</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-purple">Purple</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-light-blue">Light blue</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-black">Black</button>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-success">Success</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-warning">Warning</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-danger">Danger</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-orange">Orange</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-purple">Purple</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-cyan">Cyan</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-light-blue">Light blue</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-dark-blue">Dark blue</button>
-			</div>
-			<div class="col-sm-6">
-				<button class="btn btn-black">Black</button>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row">
+						<button class="btn btn-primary">Primary</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-info">Info</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-warning">Warning</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-orange">Orange</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-cyan">Cyan</button>
+					</div>
+					<div class="row">
+						<button class="btn btn-dark-blue">Dark blue</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- ====================================================================================
@@ -83,60 +180,58 @@
 				</h1>
 				<hr>
 			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-default">
-					<b>Default</b>
-				</span>
+			<div class="col-md-12">
+				<p>
+					Add class <code>colored-label</code> and <code>label-color</code>
+				</p>
+				<p>
+					For example I want to make a label with color light blue, I would make
+					<code>&lt;span class="colored-label label-light-blue"&gt;Hello world&lt;/span&gt;</code>
+				</p>
 			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-info">
-					<b>Info</b>
-				</span>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row label-container">
+						<span class="colored-label label-default">Default</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-success">Success</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-danger">Danger</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-purple">Purple</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-light-blue">Light blue</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-black">Black</span>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-success">
-					<b>Success</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-warning">
-					<b>Warning</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-danger">
-					<b>Danger</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-orange">
-					<b>Orange</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-purple">
-					<b>Purple</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-cyan">
-					<b>Cyan</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-light-blue">
-					<b>Light blue</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-dark-blue">
-					<b>Dark blue</b>
-				</span>
-			</div>
-			<div class="col-sm-6 label-container">
-				<span class="colored-label label-black">
-					<b>Black</b>
-				</span>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row label-container">
+						<span class="colored-label label-primary">Primary</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-info">Info</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-warning">Warning</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-orange">Orange</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-cyan">Cyan</span>
+					</div>
+					<div class="row label-container">
+						<span class="colored-label label-dark-blue">Dark blue</span>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- ====================================================================================
@@ -146,72 +241,118 @@
 				<h1>Popovers</h1>
 				<hr>
 			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-default popover-toggle-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover default
-				</button>
+			<div class="col-md-12">
+				<h3>
+					Click the button to trigger bootstrap popover.
+				</h3>
 			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-info popover-toggle-info" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover info
-				</button>
+			<div class="col-md-12">
+				<p>
+					Put template when assigning popover
+				</p>
+				<p>
+					For example, I want my popover to use black color, I would put class <code>popover-black</code> to my popover template
+<pre class="prettyprint">
+$('[data-toggle=popover]').popover({
+	template: '&lt;div class="popover popover-black"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-title"&gt;&lt;/h3&gt;&lt;div class="popover-content"&gt;&lt;/div&gt;&lt;/div&gt;'
+});
+</pre>
+				</p>
 			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-success popover-toggle-success" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover success
-				</button>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row">
+						<button type="button" class="btn btn-default popover-toggle-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover default
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-success popover-toggle-success" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover success
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-danger popover-toggle-danger" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover danger
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-purple popover-toggle-purple" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover purple
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-light-blue popover-toggle-light-blue" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover light blue
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-black popover-toggle-black" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover black
+						</button>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-warning popover-toggle-warning" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover warning
-				</button>
-			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-danger popover-toggle-danger" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover danger
-				</button>
-			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-orange popover-toggle-orange" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover orange
-				</button>
-			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-purple popover-toggle-purple" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover purple
-				</button>
-			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-cyan popover-toggle-cyan" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover cyan
-				</button>
-			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-light-blue popover-toggle-light-blue" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover light blue
-				</button>
-			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-dark-blue popover-toggle-dark-blue" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover dark blue
-				</button>
-			</div>
-			<div class="col-sm-6">
-				<button type="button" class="btn btn-black popover-toggle-black" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover black
-				</button>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row">
+						<button type="button" class="btn btn-primary popover-toggle-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover primary
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-info popover-toggle-info" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover info
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-warning popover-toggle-warning" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover warning
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-orange popover-toggle-orange" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover orange
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-cyan popover-toggle-cyan" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover cyan
+						</button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-dark-blue popover-toggle-dark-blue" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover dark blue
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<br>
 		<br>
 		<!-- START BARS
 		==================================================================================== -->
-		<div class="bars">
+		<div class="bars row">
 			<div class="col-md-12">
 				<h1>
 					Bars
 				</h1>
 				<hr>
+			</div>
+			<div class="col-md-12">
+				<p>
+					Add class <code>progress-bar-color</code>
+				</p>
+				<p>
+					For example I want to make a progress bar with color primary, I would make
+					<pre class="prettyprint">
+&lt;div class="progress"&gt;
+	&lt;div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%"&gt;
+		&lt;span class="sr-only"&gt;90% Complete (success)&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+				</p>
 			</div>
 			<div class="col-md-12">
 				<div class="progress">
@@ -222,8 +363,8 @@
 			</div>
 			<div class="col-md-12">
 				<div class="progress">
-				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%">
-				    <span class="sr-only">88% Complete (success)</span>
+				  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100" style="width: 49%">
+				    <span class="sr-only">49% Complete (success)</span>
 				  </div>
 				</div>
 			</div>
@@ -231,6 +372,13 @@
 				<div class="progress">
 				  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%">
 				    <span class="sr-only">67% Complete (success)</span>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="progress">
+				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%">
+				    <span class="sr-only">88% Complete (success)</span>
 				  </div>
 				</div>
 			</div>
@@ -298,45 +446,76 @@
 		<!-- START MODALS
 		==================================================================================== -->
 		<div class="modals row">
-			<div class="col-sm-12">
+			<div class="col-md-12">
 				<h1>
 					Modals
 				</h1>
 				<hr>
 			</div>
+			<div class="col-md-12">
+				<h3>
+					Click the button to launch bootstrap modal.
+				</h3>
+			</div>
+			<div class="col-md-12">
+				<p>
+					Add class <code>modal-color</code> to <code>.modal-content</code>
+				</p>
+				<p>
+					For example I want to make a modal with color light blue, I would make
+					<pre class="prettyprint">
+&lt;div class="modal-content modal-light-blue"&gt;
+	modal header
+	modal body
+	modal footer
+&lt;/div&gt;
+					</pre>
+				</p>
+			</div>
 			<!-- Button trigger modal -->
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-default">Default</button>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-default">Default</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-success">Success</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-danger">Danger</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-purple">Purple</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-light-blue">Light blue</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-black">Black</button>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-info">Info</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-success">Success</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-warning">Warning</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-danger">Danger</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-orange">Orange</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-purple">Purple</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-cyan">Cyan</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-light-blue">Light blue</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-dark-blue">Dark blue</button>
-			</div>
-			<div class="col-sm-6">
-				<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-black">Black</button>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-primary">Primary</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-info">Info</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-warning">Warning</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-orange">Orange</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-cyan">Cyan</button>
+					</div>
+					<div class="row">
+						<button data-toggle="modal" data-target="#bootstrap-modal" class="btn btn-dark-blue">Dark blue</button>
+					</div>
+				</div>
 			</div>
 
 			<!-- Modal -->
@@ -361,10 +540,97 @@
 		</div>
 		<!-- ====================================================================================
 		     END MODALS -->
+
+
+		<!-- START ALERTS
+		==================================================================================== -->
+		<div class="alerts row">
+			<div class="col-md-12">
+				<h1>
+					Alerts
+					<hr>
+				</h1>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-default">
+					<strong>Alert default</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-success">
+					<strong>Alert success</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-danger">
+					<strong>Alert danger</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-purple">
+					<strong>Alert purple</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-light-blue">
+					<strong>Alert light blue</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-black">
+					<strong>Alert black</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-primary">
+					<strong>Alert primary</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-info">
+					<strong>Alert info</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-warning">
+					<strong>Alert warning</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-orange">
+					<strong>Alert orange</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-cyan">
+					<strong>Alert cyan</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+			<div class="col-md-12 m-top-20">
+				<div class="error-message alert alert-dark-blue">
+					<strong>Alert dark blue</strong>
+					<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+				</div>
+			</div>
+		</div>
+		<!-- ====================================================================================
+		     END ALERTS -->
 	</body>
 
 		<script src="./jquery.js"></script>
 		<script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script>
 			$('[data-toggle=popover]').on('mousedown', function(event)
 			{

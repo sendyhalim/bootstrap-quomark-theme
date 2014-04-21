@@ -710,3 +710,61 @@
   background-color: #59cab1;
   color: #ffffff;
 }
+.alert {
+  padding: 7px 15px;
+  margin-bottom: 0;
+  -webkit-transition: 0.5s color, 0.5s background-color;
+  -o-transition: 0.5s color, 0.5s background-color;
+  transition: 0.5s color, 0.5s background-color;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+}
+.alert.alert-default {
+  background-color: #efefef;
+  color: #2f2f2f;
+}
+.alert.alert-primary {
+  background-color: #442982;
+  color: #f2f2f2;
+}
+.alert.alert-info {
+  background-color: #217fd2;
+  color: #f2f2f2;
+}
+.alert.alert-success {
+  background-color: #3a8b3b;
+  color: #f2f2f2;
+}
+.alert.alert-warning {
+  background-color: #a7d024;
+  color: #f2f2f2;
+}
+.alert.alert-danger {
+  background-color: #d9534f;
+  color: #f2f2f2;
+}
+.alert.alert-black {
+  background-color: #555555;
+  color: #f2f2f2;
+}
+.alert.alert-orange {
+  background-color: #e8ac61;
+  color: #f2f2f2;
+}
+.alert.alert-purple {
+  background-color: #c15ab1;
+  color: #f2f2f2;
+}
+.alert.alert-cyan {
+  background-color: #59cab1;
+  color: #f2f2f2;
+}
+.alert.alert-light-blue {
+  background-color: #33b5e5;
+  color: #f2f2f2;
+}
+.alert.alert-dark-blue {
+  background-color: #336177;
+  color: #f2f2f2;
+}

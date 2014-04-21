@@ -1,0 +1,125 @@
+@import "generic.less";
+
+@alertBorderRadius: 0;
+@alertPadding: 7px 15px;
+@darkenWhenHovered: false;
+
+.alert {
+	padding: @alertPadding;
+	margin-bottom: 0;
+	-webkit-transition: 0.5s color, 0.5s background-color;
+	-o-transition: 		0.5s color, 0.5s background-color;
+	transition: 		0.5s color, 0.5s background-color;
+    -webkit-border-radius: @alertBorderRadius;
+			border-radius: @alertBorderRadius;
+	border: none;
+}
+
+.alert.alert-default{
+	background-color: @defaultBackgroundColor;
+	color: @lightenDarkFont;
+	&:hover when(@darkenWhenHovered){
+		color: @darkFont;
+		background-color: @defaultDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-primary{
+	background-color: @primaryBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @primaryDarkenBackgroundColor;
+	}
+}
+
+
+.alert.alert-info{
+	background-color: @infoBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @infoDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-success{
+	background-color: @successBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @successDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-warning{
+	background-color: @warningBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @warningDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-danger{
+	background-color: @dangerBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @dangerDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-black{
+	background-color: @blackBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @blackDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-orange{
+	background-color: @orangeBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @orangeDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-purple{
+	background-color: @purpleBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @purpleDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-cyan{
+	background-color: @cyanBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @cyanDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-light-blue{
+	background-color: @lightBlueBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @lightBlueDarkenBackgroundColor;
+	}
+}
+
+.alert.alert-dark-blue{
+	background-color: @darkBlueBackgroundColor;
+	color: @darkenLightFont;
+	&:hover when(@darkenWhenHovered){
+		color: @lightFont;
+		background-color: @darkBlueDarkenBackgroundColor;
+	}
+}

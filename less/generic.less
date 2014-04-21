@@ -1,70 +1,76 @@
 /**
  * COLORS
  */
-@lightFont: #FFFFFF;
-@darkFont: #222222;
-@darkenPercentage: 10%;
-@lightenPercentage: 5%;
+@darkenFontPercentage: 5%;
+@lightenFontPercentage: 5%;
+@darkenBackgroundPercentage: 10%;
+@lightenBackgroundPercentage: 5%;
 @darkenShadowPercentage: 5%;
 
+@lightFont: #FFFFFF;
+@darkenLightFont: darken(@lightFont, @darkenFontPercentage);
+
+@darkFont: #222222;
+@lightenDarkFont: lighten(@darkFont, @lightenFontPercentage);
+
 @defaultBackgroundColor: #EFEFEF;
-@defaultDarkenBackgroundColor: darken(@defaultBackgroundColor, @darkenPercentage);
-@defaultLightenBackgroundColor: lighten(@defaultBackgroundColor, @lightenPercentage);
+@defaultDarkenBackgroundColor: darken(@defaultBackgroundColor, @darkenBackgroundPercentage);
+@defaultLightenBackgroundColor: lighten(@defaultBackgroundColor, @lightenBackgroundPercentage);
 @defaultShadowColor: darken(@defaultBackgroundColor, @darkenShadowPercentage);
 
 @primaryBackgroundColor: #442982;
-@primaryDarkenBackgroundColor: darken(@primaryBackgroundColor, @darkenPercentage);
-@primaryLightenBackgroundColor: lighten(@primaryBackgroundColor, @lightenPercentage);
+@primaryDarkenBackgroundColor: darken(@primaryBackgroundColor, @darkenBackgroundPercentage);
+@primaryLightenBackgroundColor: lighten(@primaryBackgroundColor, @lightenBackgroundPercentage);
 @primaryShadowColor: darken(@primaryBackgroundColor, @darkenShadowPercentage);
 
 @infoBackgroundColor: #217FD2;
-@infoDarkenBackgroundColor: darken(@infoBackgroundColor, @darkenPercentage);
-@infoLightenBackgroundColor: lighten(@infoBackgroundColor, @lightenPercentage);
+@infoDarkenBackgroundColor: darken(@infoBackgroundColor, @darkenBackgroundPercentage);
+@infoLightenBackgroundColor: lighten(@infoBackgroundColor, @lightenBackgroundPercentage);
 @infoShadowColor: darken(@infoBackgroundColor, @darkenShadowPercentage);
 
 @successBackgroundColor: #3A8B3B;
-@successDarkenBackgroundColor: darken(@successBackgroundColor, @darkenPercentage);
-@successLightenBackgroundColor: lighten(@successBackgroundColor, @lightenPercentage);
+@successDarkenBackgroundColor: darken(@successBackgroundColor, @darkenBackgroundPercentage);
+@successLightenBackgroundColor: lighten(@successBackgroundColor, @lightenBackgroundPercentage);
 @successShadowColor: darken(@successBackgroundColor, @darkenShadowPercentage);
 
 @warningBackgroundColor: #A7D024;
-@warningDarkenBackgroundColor: darken(@warningBackgroundColor, @darkenPercentage);
-@warningLightenBackgroundColor: lighten(@warningBackgroundColor, @lightenPercentage);
+@warningDarkenBackgroundColor: darken(@warningBackgroundColor, @darkenBackgroundPercentage);
+@warningLightenBackgroundColor: lighten(@warningBackgroundColor, @lightenBackgroundPercentage);
 @warningShadowColor: darken(@warningBackgroundColor, @darkenShadowPercentage);
 
 @dangerBackgroundColor: #D9534F;
-@dangerDarkenBackgroundColor: darken(@dangerBackgroundColor, @darkenPercentage);
-@dangerLightenBackgroundColor: lighten(@dangerBackgroundColor, @lightenPercentage);
+@dangerDarkenBackgroundColor: darken(@dangerBackgroundColor, @darkenBackgroundPercentage);
+@dangerLightenBackgroundColor: lighten(@dangerBackgroundColor, @lightenBackgroundPercentage);
 @dangerShadowColor: darken(@dangerBackgroundColor, @darkenShadowPercentage);
 
 @blackBackgroundColor: #555555;
-@blackDarkenBackgroundColor: darken(@blackBackgroundColor, @darkenPercentage);
-@blackLightenBackgroundColor: lighten(@blackBackgroundColor, @lightenPercentage);
+@blackDarkenBackgroundColor: darken(@blackBackgroundColor, @darkenBackgroundPercentage);
+@blackLightenBackgroundColor: lighten(@blackBackgroundColor, @lightenBackgroundPercentage);
 @blackShadowColor: darken(@blackBackgroundColor, @darkenShadowPercentage);
 
 @orangeBackgroundColor: #E8AC61;
-@orangeDarkenBackgroundColor: darken(@orangeBackgroundColor, @darkenPercentage);
-@orangeLightenBackgroundColor: lighten(@orangeBackgroundColor, @lightenPercentage);
+@orangeDarkenBackgroundColor: darken(@orangeBackgroundColor, @darkenBackgroundPercentage);
+@orangeLightenBackgroundColor: lighten(@orangeBackgroundColor, @lightenBackgroundPercentage);
 @orangeShadowColor: darken(@orangeBackgroundColor, @darkenShadowPercentage);
 
 @purpleBackgroundColor: #C15AB1;
-@purpleDarkenBackgroundColor: darken(@purpleBackgroundColor, @darkenPercentage);
-@purpleLightenBackgroundColor: lighten(@purpleBackgroundColor, @lightenPercentage);
+@purpleDarkenBackgroundColor: darken(@purpleBackgroundColor, @darkenBackgroundPercentage);
+@purpleLightenBackgroundColor: lighten(@purpleBackgroundColor, @lightenBackgroundPercentage);
 @purpleShadowColor: darken(@purpleBackgroundColor, @darkenShadowPercentage);
 
 @cyanBackgroundColor: #59CAB1;
-@cyanDarkenBackgroundColor: darken(@cyanBackgroundColor, @darkenPercentage);
-@cyanLightenBackgroundColor: lighten(@cyanBackgroundColor, @lightenPercentage);
+@cyanDarkenBackgroundColor: darken(@cyanBackgroundColor, @darkenBackgroundPercentage);
+@cyanLightenBackgroundColor: lighten(@cyanBackgroundColor, @lightenBackgroundPercentage);
 @cyanShadowColor: darken(@cyanBackgroundColor, @darkenShadowPercentage);
 
 @lightBlueBackgroundColor: #33B5E5;
-@lightBlueDarkenBackgroundColor: darken(@lightBlueBackgroundColor, @darkenPercentage);
-@lightBlueLightenBackgroundColor: lighten(@lightBlueBackgroundColor, @lightenPercentage);
+@lightBlueDarkenBackgroundColor: darken(@lightBlueBackgroundColor, @darkenBackgroundPercentage);
+@lightBlueLightenBackgroundColor: lighten(@lightBlueBackgroundColor, @lightenBackgroundPercentage);
 @lightBlueShadowColor: darken(@lightBlueBackgroundColor, @darkenShadowPercentage);
 
 @darkBlueBackgroundColor: #336177;
-@darkBlueDarkenBackgroundColor: darken(@darkBlueBackgroundColor, @darkenPercentage);
-@darkBlueLightenBackgroundColor: lighten(@darkBlueBackgroundColor, @lightenPercentage);
+@darkBlueDarkenBackgroundColor: darken(@darkBlueBackgroundColor, @darkenBackgroundPercentage);
+@darkBlueLightenBackgroundColor: lighten(@darkBlueBackgroundColor, @lightenBackgroundPercentage);
 @darkBlueShadowColor: darken(@darkBlueBackgroundColor, @darkenShadowPercentage);
 
 .NoBorder{
