@@ -7,242 +7,49 @@
 			border-radius: @popoverBorderRadius;
 }
 
-/**
- * DEFAULT
- */
-.popover-default{
-	background-color: @defaultBackgroundColor;
-	color: @darkFont;
+.popover {
+    .for(@background-colors-with-light-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        @background: @@background-color;
+        &-@{name} {
+        	background: @background;
+        	color: @light-font
+        }
+	    &-@{name}.top > .arrow:after{
+	    	border-top-color: @background;
+        }
+        &-@{name}.bottom > .arrow:after{
+        	border-bottom-color: @background;
+        }
+        &-@{name}.left > .arrow:after{
+        	border-left-color: @background;
+        }
+        &-@{name}.right > .arrow:after{
+        	border-right-color: @background;
+        }
+    }
 }
-.popover-default.top > .arrow:after{
-	border-top-color: @defaultBackgroundColor;
-}
-.popover-default.bottom > .arrow:after{
-	border-bottom-color: @defaultBackgroundColor;
-}
-.popover-default.left > .arrow:after{
-	border-left-color: @defaultBackgroundColor;
-}
-.popover-default.right > .arrow:after{
-	border-right-color: @defaultBackgroundColor;
-}
-
-/**
- * primary
- */
-.popover-primary{
-	background-color: @primaryBackgroundColor;
-	color: @lightFont;
-}
-.popover-primary.top > .arrow:after{
-	border-top-color: @primaryBackgroundColor;
-}
-.popover-primary.bottom > .arrow:after{
-	border-bottom-color: @primaryBackgroundColor;
-}
-.popover-primary.left > .arrow:after{
-	border-left-color: @primaryBackgroundColor;
-}
-.popover-primary.right > .arrow:after{
-	border-right-color: @primaryBackgroundColor;
-}
-
-/**
- * INFO
- */
-.popover-info{
-	background-color: @infoBackgroundColor;
-	color: @lightFont;
-}
-.popover-info.top > .arrow:after{
-	border-top-color: @infoBackgroundColor;
-}
-.popover-info.bottom > .arrow:after{
-	border-bottom-color: @infoBackgroundColor;
-}
-.popover-info.left > .arrow:after{
-	border-left-color: @infoBackgroundColor;
-}
-.popover-info.right > .arrow:after{
-	border-right-color: @infoBackgroundColor;
-}
-
-/**
- * SUCCESS
- */
-.popover-success{
-	background-color: @successBackgroundColor;
-	color: @lightFont;
-}
-.popover-success.top > .arrow:after{
-	border-top-color: @successBackgroundColor;
-}
-.popover-success.bottom > .arrow:after{
-	border-bottom-color: @successBackgroundColor;
-}
-.popover-success.left > .arrow:after{
-	border-left-color: @successBackgroundColor;
-}
-.popover-success.right > .arrow:after{
-	border-right-color: @successBackgroundColor;
-}
-
-/**
- * WARNING
- */
-.popover-warning{
-	background-color: @warningBackgroundColor;
-	color: @lightFont;
-}
-.popover-warning.top > .arrow:after{
-	border-top-color: @warningBackgroundColor;
-}
-.popover-warning.bottom > .arrow:after{
-	border-bottom-color: @warningBackgroundColor;
-}
-.popover-warning.left > .arrow:after{
-	border-left-color: @warningBackgroundColor;
-}
-.popover-warning.right > .arrow:after{
-	border-right-color: @warningBackgroundColor;
-}
-
-/**
- * DANGER
- */
-.popover-danger{
-	background-color: @dangerBackgroundColor;
-	color: @lightFont;
-}
-.popover-danger.top > .arrow:after{
-	border-top-color: @dangerBackgroundColor;
-}
-.popover-danger.bottom > .arrow:after{
-	border-bottom-color: @dangerBackgroundColor;
-}
-.popover-danger.left > .arrow:after{
-	border-left-color: @dangerBackgroundColor;
-}
-.popover-danger.right > .arrow:after{
-	border-right-color: @dangerBackgroundColor;
-}
-
-/**
- * BLACK
- */
-.popover-black{
-	background-color: @blackBackgroundColor;
-	color: @lightFont;
-}
-.popover-black.top > .arrow:after{
-	border-top-color: @blackBackgroundColor;
-}
-.popover-black.bottom > .arrow:after{
-	border-bottom-color: @blackBackgroundColor;
-}
-.popover-black.left > .arrow:after{
-	border-left-color: @blackBackgroundColor;
-}
-.popover-black.right > .arrow:after{
-	border-right-color: @blackBackgroundColor;
-}
-
-/**
- * ORANGE
- */
-.popover-orange{
-	background-color: @orangeBackgroundColor;
-	color: @lightFont;
-}
-.popover-orange.top > .arrow:after{
-	border-top-color: @orangeBackgroundColor;
-}
-.popover-orange.bottom > .arrow:after{
-	border-bottom-color: @orangeBackgroundColor;
-}
-.popover-orange.left > .arrow:after{
-	border-left-color: @orangeBackgroundColor;
-}
-.popover-orange.right > .arrow:after{
-	border-right-color: @orangeBackgroundColor;
-}
-
-/**
- * PURPLE
- */
-.popover-purple{
-	background-color: @purpleBackgroundColor;
-	color: @lightFont;
-}
-.popover-purple.top > .arrow:after{
-	border-top-color: @purpleBackgroundColor;
-}
-.popover-purple.bottom > .arrow:after{
-	border-bottom-color: @purpleBackgroundColor;
-}
-.popover-purple.left > .arrow:after{
-	border-left-color: @purpleBackgroundColor;
-}
-.popover-purple.right > .arrow:after{
-	border-right-color: @purpleBackgroundColor;
-}
-
-/**
- * CYAN
- */
-.popover-cyan{
-	background-color: @cyanBackgroundColor;
-	color: @lightFont;
-}
-.popover-cyan.top > .arrow:after{
-	border-top-color: @cyanBackgroundColor;
-}
-.popover-cyan.bottom > .arrow:after{
-	border-bottom-color: @cyanBackgroundColor;
-}
-.popover-cyan.left > .arrow:after{
-	border-left-color: @cyanBackgroundColor;
-}
-.popover-cyan.right > .arrow:after{
-	border-right-color: @cyanBackgroundColor;
-}
-
-/**
- * LIGHT BLUE
- */
-.popover-light-blue{
-	background-color: @lightBlueBackgroundColor;
-	color: @lightFont;
-}
-.popover-light-blue.top > .arrow:after{
-	border-top-color: @lightBlueBackgroundColor;
-}
-.popover-light-blue.bottom > .arrow:after{
-	border-bottom-color: @lightBlueBackgroundColor;
-}
-.popover-light-blue.left > .arrow:after{
-	border-left-color: @lightBlueBackgroundColor;
-}
-.popover-light-blue.right > .arrow:after{
-	border-right-color: @lightBlueBackgroundColor;
-}
-
-/**
- * DARK BLUE
- */
-.popover-dark-blue{
-	background-color: @darkBlueBackgroundColor;
-	color: @lightFont;
-}
-.popover-dark-blue.top > .arrow:after{
-	border-top-color: @darkBlueBackgroundColor;
-}
-.popover-dark-blue.bottom > .arrow:after{
-	border-bottom-color: @darkBlueBackgroundColor;
-}
-.popover-dark-blue.left > .arrow:after{
-	border-left-color: @darkBlueBackgroundColor;
-}
-.popover-dark-blue.right > .arrow:after{
-	border-right-color: @darkBlueBackgroundColor;
+.popover {
+    .for(@background-colors-with-dark-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        @background: @@background-color;
+        &-@{name} {
+        	background: @background;
+        	color: @dark-font
+        }
+        &-@{name}.top > .arrow:after{
+        	border-top-color: @background;
+        }
+        &-@{name}.bottom > .arrow:after{
+        	border-bottom-color: @background;
+        }
+        &-@{name}.left > .arrow:after{
+        	border-left-color: @background;
+        }
+        &-@{name}.right > .arrow:after{
+        	border-right-color: @background;
+        }
+    }
 }

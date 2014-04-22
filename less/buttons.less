@@ -3,45 +3,45 @@
 /**
  * BASIC BUTTON VARIABLES
  */
-@btnShadow: true;
+@btn-shadow: true;
 
-@btnMarginTop: 2px;
-@btnMarginBottom: 2px;
-@btnMinWidth: 34px;
-@btnMinHeight: 28px;
-@btnHorizontalPadding: 6px;
-@btnVerticalPadding: 2px;
-@btnPaddingTop: 3px;
-@btnBorderRadius: 2px;
-@btnShadowSize: 0 1px;
-@btnTopPositionWhenHovered: 1px;
+@button-margin-top: 2px;
+@btn-margin-bottom: 2px;
+@btn-min-width: 34px;
+@btn-min-height: 28px;
+@btn-horizontal-padding: 6px;
+@btn-vertical-padding: 2px;
+@btn-padding-top: 3px;
+@btn-border-radius: 2px;
+@btn-shadow-size: 0 1px;
+@btn-top-position-when-hovered: 1px;
 
 .BtnBehavior{
 	.NoOutline;
 	.NoBorder;
 }
-.BtnTransition(@colorTransition: 0.5s, @backgroundColorTransition: 0.5s){
-	-webkit-transition: @colorTransition color, @backgroundColorTransition background-color;
-	-o-transition: 		@colorTransition color, @backgroundColorTransition background-color;
-	transition: 		@colorTransition color, @backgroundColorTransition background-color;
+.BtnTransition(@color-transition: 0.5s, @background-color-transition: 0.5s){
+	-webkit-transition: @color-transition color, @background-color-transition background-color;
+	-o-transition: 		@color-transition color, @background-color-transition background-color;
+	transition: 		@color-transition color, @background-color-transition background-color;
 }
-.BtnShadow(@shadowColor, @shadowSize: @btnShadowSize) when(@btnShadow) {
-	.Shadow(@shadowColor, @shadowSize);
+.BtnShadow(@shadowColor, @shadow-size: @btn-shadow-size) when(@btn-shadow) {
+	.Shadow(@shadowColor, @shadow-size);
 }
-.BtnPosition when(@btnShadow){
-	top: @btnTopPositionWhenHovered;
+.BtnPosition when(@btn-shadow){
+	top: @btn-top-position-when-hovered;
 }
 .btn {
 	.BoldFont;
     .BtnBehavior;
-	margin-top: @btnMarginTop;
-	margin-bottom: @btnMarginBottom;
-	min-width: @btnMinWidth;
-	min-height: @btnMinHeight;
-	padding: @btnVerticalPadding @btnHorizontalPadding;
-	padding-top: @btnPaddingTop;
-    border-radius: @btnBorderRadius;
-    -webkit-border-radius: @btnBorderRadius;
+	margin-top: @button-margin-top;
+	margin-bottom: @btn-margin-bottom;
+	min-width: @btn-min-width;
+	min-height: @btn-min-height;
+	padding: @btn-vertical-padding @btn-horizontal-padding;
+	padding-top: @btn-padding-top;
+    border-radius: @btn-border-radius;
+    -webkit-border-radius: @btn-border-radius;
 }
 
 .btn:hover,
@@ -56,182 +56,69 @@
 	.BtnTransition;
 }
 
-.btn-default{
-	.BtnShadow(@defaultShadowColor);
-	background-color: @defaultBackgroundColor;
-	color: @darkFont;
+
+.btn {
+    .for(@background-colors-with-dark-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        @shadow-color: "@{name}-shadow-color";
+        @darken-background-color: "@{name}-darken-background-color";
+        &-@{name} {
+        	.BtnShadow(@@shadow-color);
+        	background: @@background-color;
+        	color: @dark-font
+        }
+        &-@{name}:hover,
+        &-@{name}:focus,
+        &-@{name}:active{
+        	.NoBorder;
+			background-color: @@darken-background-color;
+			color: @dark-font;
+        }
+    }
 }
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active,
-.btn-default.active,
-.open .dropdown-toggle.btn-default{
-	background-color: @defaultDarkenBackgroundColor;
-	color: @darkFont;
-	.NoBorder;
+.btn {
+    .for(@background-colors-with-light-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        @shadow-color: "@{name}-shadow-color";
+        @darken-background-color: "@{name}-darken-background-color";
+        &-@{name} {
+        	.BtnShadow(@@shadow-color);
+        	background: @@background-color;
+        	color: @light-font
+        }
+        &-@{name}:hover,
+        &-@{name}:focus,
+        &-@{name}:active{
+        	.NoBorder;
+			background-color: @@darken-background-color;
+			color: @light-font;
+        }
+    }
 }
 
-.btn-primary {
-	.BtnShadow(@primaryShadowColor);
-    background-color: @primaryBackgroundColor;
-    color: @lightFont;
-}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary{
-	background-color: @primaryDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
+//----- FOR DROPDOWNS
 
-.btn-info {
-	.BtnShadow(@infoShadowColor);
-    background-color: @infoBackgroundColor;
-    color: @lightFont;
+.open .dropdown-toggle.btn {
+    .for(@background-colors-with-dark-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &-@{name} {
+        	.NoBorder;
+			background-color: @@background-color;
+			color: @dark-font;
+        }
+    }
 }
-.btn-info:hover,
-.btn-info:focus,
-.btn-info:active,
-.btn-info.active,
-.open .dropdown-toggle.btn-info{
-	background-color: @infoDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-success{
-	.BtnShadow(@successShadowColor);
-	background-color: @successBackgroundColor;
-	color: @lightFont;
-}
-.btn-success:hover,
-.btn-success:focus,
-.btn-success:active,
-.btn-success.active,
-.open .dropdown-toggle.btn-success{
-	background-color: @successDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-warning{
-	.BtnShadow(@warningShadowColor);
-	background-color: @warningBackgroundColor;
-	color: @lightFont;
-}
-.btn-warning:hover,
-.btn-warning:focus,
-.btn-warning:active,
-.btn-warning.active,
-.open .dropdown-toggle.btn-warning{
-	background-color: @warningDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-danger{
-	.BtnShadow(@dangerShadowColor);
-	background-color: @dangerBackgroundColor;
-	color: @lightFont;
-}
-.btn-danger:hover,
-.btn-danger:focus,
-.btn-danger:active,
-.btn-danger.active,
-.open .dropdown-toggle.btn-danger{
-	background-color: @dangerDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-black{
-	.BtnShadow(@blackShadowColor);
-	background-color: @blackBackgroundColor;
-	color: @lightFont;
-}
-.btn-black:hover,
-.btn-black:focus,
-.btn-black:active,
-.btn-black.active,
-.open .dropdown-toggle.btn-black{
-	background-color: @blackDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-orange{
-	.BtnShadow(@orangeShadowColor);
-	background-color: @orangeBackgroundColor;
-	color: @lightFont;
-}
-.btn-orange:hover,
-.btn-orange:focus,
-.btn-orange:active,
-.btn-orange.active,
-.open .dropdown-toggle.btn-orange{
-	background-color: @orangeDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-purple{
-	.BtnShadow(@purpleShadowColor);
-	background-color: @purpleBackgroundColor;
-	color: @lightFont;
-}
-.btn-purple:hover,
-.btn-purple:focus,
-.btn-purple:active,
-.btn-purple.active,
-.open .dropdown-toggle.btn-purple{
-	background-color: @purpleDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-cyan{
-	.BtnShadow(@cyanShadowColor);
-	background-color: @cyanBackgroundColor;
-	color: @lightFont;
-}
-.btn-cyan:hover,
-.btn-cyan:focus,
-.btn-cyan:active,
-.btn-cyan.active,
-.open .dropdown-toggle.btn-cyan{
-	background-color: @cyanDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-light-blue{
-	.BtnShadow(@lightBlueShadowColor);
-	background-color: @lightBlueBackgroundColor;
-	color: @lightFont;
-}
-.btn-light-blue:hover,
-.btn-light-blue:focus,
-.btn-light-blue:active,
-.btn-light-blue.active,
-.open .dropdown-toggle.btn-light-blue{
-	background-color: @lightBlueDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
-}
-
-.btn-dark-blue{
-	.BtnShadow(@darkBlueShadowColor);
-	background-color: @darkBlueBackgroundColor;
-	color: @lightFont;
-}
-.btn-dark-blue:hover,
-.btn-dark-blue:focus,
-.btn-dark-blue:active,
-.btn-dark-blue.active,
-.open .dropdown-toggle.btn-dark-blue{
-	background-color: @darkBlueDarkenBackgroundColor;
-	color: @lightFont;
-	.NoBorder;
+.open .dropdown-toggle.btn {
+    .for(@background-colors-with-light-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &-@{name} {
+        	.NoBorder;
+			background-color: @@background-color;
+			color: @light-font;
+        }
+    }
 }

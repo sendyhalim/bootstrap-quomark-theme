@@ -1,69 +1,42 @@
 @import "generic.less";
 
-@progressBarShadowSize: inset 0 -1px 0;
-@progressBarRadius: 0;
-@progressBackgroundColor: #EFFFEF;
+@progress-bar-shadow-size: inset 0 -1px 0;
+@progress-bar-radius: 0;
+@progress-background-color: #EFFFEF;
 
-.ProgressBarShadow(@baseColor) {
-	-webkit-box-shadow: @progressBarShadowSize rgba(red(@baseColor), green(@baseColor), blue(@baseColor), 0.3);
-			box-shadow: @progressBarShadowSize rgba(red(@baseColor), green(@baseColor), blue(@baseColor), 0.3);
+.ProgressBarShadow(@base-color) {
+	-webkit-box-shadow: @progress-bar-shadow-size rgba(red(@base-color), green(@base-color), blue(@base-color), 0.3);
+			box-shadow: @progress-bar-shadow-size rgba(red(@base-color), green(@base-color), blue(@base-color), 0.3);
 }
 
 .progress{
-	-webkit-border-radius: @progressBarRadius;
-			border-radius: @progressBarRadius;
+	-webkit-border-radius: @progress-bar-radius;
+			border-radius: @progress-bar-radius;
 }
 .progress{
-	background-color: @progressBackgroundColor;
+	background-color: @progress-background-color;
 }
 .progress .progress-bar{
-	border-radius: @progressBarRadius;
+	border-radius: @progress-bar-radius;
 }
-.progress-bar-default{
-	background-color: @defaultBackgroundColor;
-	.ProgressBarShadow(@defaultShadowColor);
+
+.progress-bar {
+    .for(@background-colors-with-light-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &-@{name} {
+        	.ProgressBarShadow(@@background-color);
+        	background: @@background-color;
+        }
+    }
 }
-.progress-bar-primary{
-	background-color: @primaryBackgroundColor;
-	.ProgressBarShadow(@primaryShadowColor);
-}
-.progress-bar-info{
-	background-color: @infoBackgroundColor;
-	.ProgressBarShadow(@infoShadowColor);
-}
-.progress-bar-success{
-	background-color: @successBackgroundColor;
-	.ProgressBarShadow(@successShadowColor);
-}
-.progress-bar-warning{
-	background-color: @warningBackgroundColor;
-	.ProgressBarShadow(@warningShadowColor);
-}
-.progress-bar-danger{
-	background-color: @dangerBackgroundColor;
-	.ProgressBarShadow(@dangerBackgroundColor);
-}
-.progress-bar-black{
-	background-color: @blackBackgroundColor;
-	.ProgressBarShadow(@blackBackgroundColor);
-}
-.progress-bar-orange{
-	background-color: @orangeBackgroundColor;
-	.ProgressBarShadow(@orangeBackgroundColor);
-}
-.progress-bar-purple{
-	background-color: @purpleBackgroundColor;
-	.ProgressBarShadow(@purpleBackgroundColor);
-}
-.progress-bar-cyan{
-	background-color: @cyanBackgroundColor;
-	.ProgressBarShadow(@cyanBackgroundColor);
-}
-.progress-bar-light-blue{
-	background-color: @lightBlueBackgroundColor;
-	.ProgressBarShadow(@lightBlueBackgroundColor);
-}
-.progress-bar-dark-blue{
-	background-color: @darkBlueBackgroundColor;
-	.ProgressBarShadow(@darkBlueBackgroundColor);
+.progress-bar {
+    .for(@background-colors-with-dark-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &-@{name} {
+        	.ProgressBarShadow(@@background-color);
+        	background: @@background-color;
+        }
+    }
 }

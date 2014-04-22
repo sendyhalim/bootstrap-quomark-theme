@@ -1,54 +1,27 @@
 @import "generic.less";
+@import "lib/for";
 
 .colored-label{
 	padding: 3px 7px;
 }
 
-.colored-label.label-default{
-	background-color: @defaultBackgroundColor;
-	color: @darkFont;
+.colored-label {
+    .for(@background-colors-with-light-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &.label-@{name} {
+        	background: @@background-color;
+        	color: @light-font
+        }
+    }
 }
-.colored-label.label-success{
-	background-color: @successBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-info{
-	background-color: @infoBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-primary{
-	background-color: @primaryBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-warning{
-	background-color: @warningBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-danger{
-	background-color: @dangerBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-black{
-	background-color: @blackBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-orange{
-	background-color: @orangeBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-purple{
-	background-color: @purpleBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-light-blue{
-	background-color: @lightBlueBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-dark-blue{
-	background-color: @darkBlueBackgroundColor;
-	color: @lightFont;
-}
-.colored-label.label-cyan{
-	background-color: @cyanBackgroundColor;
-	color: @lightFont;
+.colored-label {
+    .for(@background-colors-with-dark-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &.label-@{name} {
+        	background: @@background-color;
+        	color: @dark-font
+        }
+    }
 }
