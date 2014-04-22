@@ -3,6 +3,10 @@
 @modalBorderRadius: 0;
 @modalBorder: none;
 
+.Modal-footer-header-border-color(@backgroundColor){
+    border-color: darken(@backgroundColor, 3%);
+}
+
 .modal-content{
 	border: @modalBorder;
 	-webkit-border-radius: @modalBorderRadius;
@@ -12,19 +16,19 @@
     .for(@background-colors-with-light-font); .-each(@color) {
         @name: e(@color);
         @background-color: "@{name}-background-color";
-        @lighten-background-color: "@{name}-lighten-background-color";
         @background: @@background-color;
-        @lighten-background: @@lighten-background-color;
 
         &-content.modal-@{name} {
         	background: @background;
         	color: @light-font
         }
         &-content.modal-@{name} .modal-header{
-			border-bottom: 1px solid @lighten-background;
+			border-bottom: 1px solid;
+            .Modal-footer-header-border-color(@background);
         }
         &-content.modal-@{name} .modal-footer{
-        	border-top: 1px solid @lighten-background;
+        	border-top: 1px solid;
+            .Modal-footer-header-border-color(@background);
         }
     }
 }
@@ -33,19 +37,19 @@
     .for(@background-colors-with-dark-font); .-each(@color) {
         @name: e(@color);
         @background-color: "@{name}-background-color";
-        @lighten-background-color: "@{name}-lighten-background-color";
         @background: @@background-color;
-        @lighten-background: @@lighten-background-color;
 
         &-content.modal-@{name} {
         	background: @background;
         	color: @dark-font
         }
         &-content.modal-@{name} .modal-header{
-			border-bottom: 1px solid @lighten-background;
+			border-bottom: 1px solid;
+            .Modal-footer-header-border-color(@background);
         }
         &-content.modal-@{name} .modal-footer{
-        	border-top: 1px solid @lighten-background;
+        	border-top: 1px solid;
+            .Modal-footer-header-border-color(@background);
         }
     }
 }
