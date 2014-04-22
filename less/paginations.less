@@ -1,0 +1,84 @@
+@import "generic.less";
+
+@paginationPadding: 6px 12px;
+@paginationLineHeight: 1.42857;
+@paginationBorderRadius: 3px;
+@useShadow: true;
+
+.ActiveAndDisabledPagination(@shadowColor, @backgroundColor)
+{
+    background-color: @backgroundColor;
+    border: 1px solid @backgroundColor;
+    -webkit-box-shadow: 0 1px @shadowColor;
+    		box-shadow: 0 1px @shadowColor;
+}
+.PaginationTransition(@colorTransition: 0.5s, @backgroundColorTransition: 0.5s){
+	-webkit-transition: @colorTransition color, @backgroundColorTransition background-color;
+	-o-transition: 		@colorTransition color, @backgroundColorTransition background-color;
+	transition: 		@colorTransition color, @backgroundColorTransition background-color;
+}
+.pagination > li a:hover,
+.pagination > li a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus{
+	.NoShadow;
+	.NoOutline;
+	background-color: @whiteDarkenBackgroundColor;
+	border: 1px solid @whiteDarkenBackgroundColor;
+}
+
+.pagination > li > a,
+.pagination > li > span{
+	.PaginationTransition;
+	margin-right: 2px;
+	background-color: @whiteBackgroundColor;
+	border: 1px solid @whiteDarkenBackgroundColor;
+	color: @lightenDarkFont;
+	border-radius: @paginationBorderRadius;
+	-webkit-box-shadow: 0 1px @whiteShadowColor;
+			box-shadow: 0 1px @whiteShadowColor;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-top-left-radius: @paginationBorderRadius;
+    border-bottom-left-radius: @paginationBorderRadius;
+    border-top-right-radius: @paginationBorderRadius;
+    border-bottom-right-radius: @paginationBorderRadius;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    border-top-left-radius: @paginationBorderRadius;
+    border-bottom-left-radius: @paginationBorderRadius;
+    border-top-right-radius: @paginationBorderRadius;
+    border-bottom-right-radius: @paginationBorderRadius;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .disabled > a,
+.pagination > .disabled > span {
+    cursor: default;
+    padding: @paginationPadding;
+    line-height: @paginationLineHeight;
+    background-color: @whiteDarkenBackgroundColor;
+    color: @darkFont;
+    border: 1px solid darken(@whiteShadowColor, 10%);
+}
+.pagination > .disabled > a,
+.pagination > .disabled > span{
+	border: 1px dotted darken(@whiteShadowColor, 10%);
+}
+
+
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus{
+	background-color: @whiteDarkenBackgroundColor;
+	color: @darkFont;
+	border: 1px solid @whiteShadowColor;
+}

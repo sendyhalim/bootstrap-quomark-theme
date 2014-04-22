@@ -13,6 +13,11 @@
 @darkFont: #222222;
 @lightenDarkFont: lighten(@darkFont, @lightenFontPercentage);
 
+@whiteBackgroundColor: #FFFFFF;
+@whiteDarkenBackgroundColor: darken(@whiteBackgroundColor, @darkenBackgroundPercentage - 5);
+@whiteLightenBackgroundColor: lighten(@whiteBackgroundColor, @lightenBackgroundPercentage);
+@whiteShadowColor: darken(@whiteBackgroundColor, @darkenShadowPercentage);
+
 @defaultBackgroundColor: #EFEFEF;
 @defaultDarkenBackgroundColor: darken(@defaultBackgroundColor, @darkenBackgroundPercentage);
 @defaultLightenBackgroundColor: lighten(@defaultBackgroundColor, @lightenBackgroundPercentage);
@@ -81,11 +86,11 @@
 }
 .NoShadow{
 	-webkit-box-shadow: none;
-	box-shadow: none;
+			box-shadow: none;
 }
 .Shadow(@shadowColor, @shadowSize){
 	-webkit-box-shadow: @shadowSize @shadowColor;
-	box-shadow: @shadowSize @shadowColor;
+			box-shadow: @shadowSize @shadowColor;
 }
 .BoldFont{
 	font-weight: bold;
