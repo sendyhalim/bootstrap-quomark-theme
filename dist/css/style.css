@@ -143,16 +143,16 @@
   color: #ffffff;
 }
 .btn-black {
-  -webkit-box-shadow: 0 1px #484848;
-  box-shadow: 0 1px #484848;
-  background: #555555;
+  -webkit-box-shadow: 0 1px #151515;
+  box-shadow: 0 1px #151515;
+  background: #222222;
   color: #ffffff;
 }
 .btn-black:hover,
 .btn-black:focus,
 .btn-black:active {
   border: none;
-  background-color: #434343;
+  background-color: #101010;
   color: #ffffff;
 }
 .btn-orange {
@@ -257,7 +257,7 @@
 }
 .open .dropdown-toggle.btn-black {
   border: none;
-  background-color: #555555;
+  background-color: #222222;
   color: #ffffff;
 }
 .open .dropdown-toggle.btn-orange {
@@ -321,9 +321,9 @@
   background: #d9534f;
 }
 .progress-bar-black {
-  -webkit-box-shadow: inset 0 -1px 0 rgba(85, 85, 85, 0.3);
-  box-shadow: inset 0 -1px 0 rgba(85, 85, 85, 0.3);
-  background: #555555;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(34, 34, 34, 0.3);
+  box-shadow: inset 0 -1px 0 rgba(34, 34, 34, 0.3);
+  background: #222222;
 }
 .progress-bar-orange {
   -webkit-box-shadow: inset 0 -1px 0 rgba(232, 172, 97, 0.3);
@@ -446,20 +446,20 @@
   border-right-color: #d9534f;
 }
 .popover-black {
-  background: #555555;
+  background: #222222;
   color: #ffffff;
 }
 .popover-black.top > .arrow:after {
-  border-top-color: #555555;
+  border-top-color: #222222;
 }
 .popover-black.bottom > .arrow:after {
-  border-bottom-color: #555555;
+  border-bottom-color: #222222;
 }
 .popover-black.left > .arrow:after {
-  border-left-color: #555555;
+  border-left-color: #222222;
 }
 .popover-black.right > .arrow:after {
-  border-right-color: #555555;
+  border-right-color: #222222;
 }
 .popover-orange {
   background: #e8ac61;
@@ -639,16 +639,16 @@
   border-color: #d64742;
 }
 .modal-content.modal-black {
-  background: #555555;
+  background: #222222;
   color: #ffffff;
 }
 .modal-content.modal-black .modal-header {
   border-bottom: 1px solid;
-  border-color: #4d4d4d;
+  border-color: #1a1a1a;
 }
 .modal-content.modal-black .modal-footer {
   border-top: 1px solid;
-  border-color: #4d4d4d;
+  border-color: #1a1a1a;
 }
 .modal-content.modal-orange {
   background: #e8ac61;
@@ -758,7 +758,7 @@
   color: #ffffff;
 }
 .colored-label.label-black {
-  background: #555555;
+  background: #222222;
   color: #ffffff;
 }
 .colored-label.label-orange {
@@ -840,11 +840,11 @@
   color: #ffffff;
 }
 .alert.alert-black {
-  background: #555555;
+  background: #222222;
   color: #f2f2f2;
 }
 .alert.alert-black:hover {
-  background: #434343;
+  background: #101010;
   color: #ffffff;
 }
 .alert.alert-orange {
@@ -1280,7 +1280,7 @@
   border: none;
   padding: 3px 7px;
   margin-right: 3px;
-  background-color: #555555;
+  background-color: #222222;
   color: #ffffff;
 }
 .pagination.pagination-black > li:last-child > a,
@@ -1304,7 +1304,7 @@
   border: none;
   padding: 3px 7px;
   line-height: 1.42857;
-  background-color: #434343;
+  background-color: #101010;
   color: #ffffff;
 }
 .pagination.pagination-black > .disabled > a,
@@ -1322,7 +1322,7 @@
   box-shadow: none;
   outline: 0 !important;
   border: none;
-  background-color: #434343;
+  background-color: #101010;
 }
 .pagination.pagination-orange > li > a,
 .pagination.pagination-orange > li > span {
@@ -1634,4 +1634,56 @@
   outline: 0 !important;
   border: none;
   background-color: #fafafa;
+}
+.background-primary {
+  background: #442982;
+  color: #ffffff;
+}
+.background-info {
+  background: #217fd2;
+  color: #ffffff;
+}
+.background-success {
+  background: #3a8b3b;
+  color: #ffffff;
+}
+.background-warning {
+  background: #a7d024;
+  color: #ffffff;
+}
+.background-danger {
+  background: #d9534f;
+  color: #ffffff;
+}
+.background-black {
+  background: #222222;
+  color: #ffffff;
+}
+.background-orange {
+  background: #e8ac61;
+  color: #ffffff;
+}
+.background-purple {
+  background: #7c0eb2;
+  color: #ffffff;
+}
+.background-cyan {
+  background: #59cab1;
+  color: #ffffff;
+}
+.background-light-blue {
+  background: #33b5e5;
+  color: #ffffff;
+}
+.background-dark-blue {
+  background: #336177;
+  color: #ffffff;
+}
+.background-white {
+  background: #ffffff;
+  color: #222222;
+}
+.background-default {
+  background: #efefef;
+  color: #222222;
 }
