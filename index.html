@@ -44,10 +44,19 @@
 				word-break: normal;
 				word-wrap: normal;
 			}
+			div#switch-background-color{
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				z-index: 999;
+			}
 		</style>
 	</head>
 
 	<body class="container">
+		<div id="switch-background-color">
+			<button class="btn btn-black">Switch to <span class="current-background-color">dark</span></button>
+		</div>
 		<div class="info row">
 			<div class="col-md-12">
 				<h1>
@@ -93,6 +102,7 @@
 				<hr>
 			</div>
 			<div class="col-md-12">
+				<p><span class="colored-label label-white"></span>White</p>
 				<p><span class="colored-label label-default"></span>Default</p>
 				<p><span class="colored-label label-primary"></span>Primary</p>
 				<p><span class="colored-label label-info"></span>Info</p>
@@ -117,6 +127,32 @@
 		<script src="./jquery.js"></script>
 		<script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 		<script>
+			var backgroundColors = {
+				'light': '#FFF',
+				'dark': '#222'
+			}
+			$('#switch-background-color').click(function()
+			{
+				var switchButton = $(this);
+				var currentBackground = switchButton.find('.current-background-color');
+				var toColor = currentBackground.text();
+				$('html, body').css('background-color', backgroundColors[toColor]);
+
+				if (toColor == 'dark')
+				{
+					currentBackground.text('light');
+					currentBackground.parent().removeClass('btn-black').addClass('btn-white');
+					$('html, body').css('color', backgroundColors['light']);
+				}
+				else
+				{
+					currentBackground.text('dark');
+					currentBackground.parent().removeClass('btn-white').addClass('btn-black');
+					$('html, body').css('color', backgroundColors['dark']);
+				}
+
+
+			});
 			var filesToBeIncluded = [
 				'./partials/buttons.html',
 				'./partials/labels.html',
