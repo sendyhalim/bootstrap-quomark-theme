@@ -1,0 +1,22 @@
+@import "generic.less";
+
+.background {
+    .for(@background-colors-with-light-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &-@{name} {
+        	background: @@background-color;
+        	color: @light-font
+        }
+    }
+}
+.background {
+    .for(@background-colors-with-dark-font); .-each(@color) {
+        @name: e(@color);
+        @background-color: "@{name}-background-color";
+        &-@{name} {
+        	background: @@background-color;
+        	color: @dark-font
+        }
+    }
+}
