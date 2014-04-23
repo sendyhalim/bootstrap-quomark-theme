@@ -1,11 +1,12 @@
 @import "generic.less";
 
-@pagination-padding: 5px 10px;
+@pagination-padding: 3px 7px;
 @pagination-line-height: 1.42857;
-@pagination-border-radius: 2px;
+@pagination-border-radius: 3px;
 @use-shadow: false;
 @use-border: -3;
-@pagination-margin-right: 2px;
+@pagination-margin-right: 3px;
+@pagination-font-size: 0.8em;
 
 .ActiveAndDisabledPagination(@shadow-color, @background-color)
 {
@@ -31,6 +32,10 @@
 
 .PaginationBorder(@border-color, @background-color) when(@use-border <= 0){
 	border: none;
+}
+
+.pagination{
+	font-size: @pagination-font-size;
 }
 
 //----- BACKGROUNDS WITH DARK FONT
