@@ -14,6 +14,9 @@
 .BoldFont {
   font-weight: bold;
 }
+.full-width {
+  width: 100%;
+}
 /**
  * BASIC BUTTON VARIABLES
  */
