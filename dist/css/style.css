@@ -223,6 +223,32 @@
   background-color: #284d5e;
   color: #ffffff;
 }
+.btn-light-green {
+  -webkit-box-shadow: 0 1px #46c4a8;
+  box-shadow: 0 1px #46c4a8;
+  background: #59cab1;
+  color: #ffffff;
+}
+.btn-light-green:hover,
+.btn-light-green:focus,
+.btn-light-green:active {
+  border: none;
+  background-color: #3ec1a4;
+  color: #ffffff;
+}
+.btn-brown {
+  -webkit-box-shadow: 0 1px #ae5d4b;
+  box-shadow: 0 1px #ae5d4b;
+  background: #b86b5a;
+  color: #ffffff;
+}
+.btn-brown:hover,
+.btn-brown:focus,
+.btn-brown:active {
+  border: none;
+  background-color: #a75948;
+  color: #ffffff;
+}
 .open .dropdown-toggle.btn-white {
   border: none;
   background-color: #ffffff;
@@ -286,6 +312,16 @@
 .open .dropdown-toggle.btn-dark-blue {
   border: none;
   background-color: #336177;
+  color: #ffffff;
+}
+.open .dropdown-toggle.btn-light-green {
+  border: none;
+  background-color: #59cab1;
+  color: #ffffff;
+}
+.open .dropdown-toggle.btn-brown {
+  border: none;
+  background-color: #b86b5a;
   color: #ffffff;
 }
 .progress {
@@ -352,6 +388,16 @@
   -webkit-box-shadow: inset 0 -1px 0 rgba(51, 97, 119, 0.3);
   box-shadow: inset 0 -1px 0 rgba(51, 97, 119, 0.3);
   background: #336177;
+}
+.progress-bar-light-green {
+  -webkit-box-shadow: inset 0 -1px 0 rgba(89, 202, 177, 0.3);
+  box-shadow: inset 0 -1px 0 rgba(89, 202, 177, 0.3);
+  background: #59cab1;
+}
+.progress-bar-brown {
+  -webkit-box-shadow: inset 0 -1px 0 rgba(184, 107, 90, 0.3);
+  box-shadow: inset 0 -1px 0 rgba(184, 107, 90, 0.3);
+  background: #b86b5a;
 }
 .progress-bar-white {
   -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.3);
@@ -544,6 +590,38 @@
 .popover-dark-blue.right > .arrow:after {
   border-right-color: #336177;
 }
+.popover-light-green {
+  background: #59cab1;
+  color: #ffffff;
+}
+.popover-light-green.top > .arrow:after {
+  border-top-color: #59cab1;
+}
+.popover-light-green.bottom > .arrow:after {
+  border-bottom-color: #59cab1;
+}
+.popover-light-green.left > .arrow:after {
+  border-left-color: #59cab1;
+}
+.popover-light-green.right > .arrow:after {
+  border-right-color: #59cab1;
+}
+.popover-brown {
+  background: #b86b5a;
+  color: #ffffff;
+}
+.popover-brown.top > .arrow:after {
+  border-top-color: #b86b5a;
+}
+.popover-brown.bottom > .arrow:after {
+  border-bottom-color: #b86b5a;
+}
+.popover-brown.left > .arrow:after {
+  border-left-color: #b86b5a;
+}
+.popover-brown.right > .arrow:after {
+  border-right-color: #b86b5a;
+}
 .popover-white {
   background: #ffffff;
   color: #222222;
@@ -713,6 +791,30 @@
   border-top: 1px solid;
   border-color: #2e586c;
 }
+.modal-content.modal-light-green {
+  background: #59cab1;
+  color: #ffffff;
+}
+.modal-content.modal-light-green .modal-header {
+  border-bottom: 1px solid;
+  border-color: #4dc6ac;
+}
+.modal-content.modal-light-green .modal-footer {
+  border-top: 1px solid;
+  border-color: #4dc6ac;
+}
+.modal-content.modal-brown {
+  background: #b86b5a;
+  color: #ffffff;
+}
+.modal-content.modal-brown .modal-header {
+  border-bottom: 1px solid;
+  border-color: #b3614f;
+}
+.modal-content.modal-brown .modal-footer {
+  border-top: 1px solid;
+  border-color: #b3614f;
+}
 .modal-content.modal-white {
   background: #ffffff;
   color: #222222;
@@ -782,6 +884,14 @@
 }
 .colored-label.label-dark-blue {
   background: #336177;
+  color: #ffffff;
+}
+.colored-label.label-light-green {
+  background: #59cab1;
+  color: #ffffff;
+}
+.colored-label.label-brown {
+  background: #b86b5a;
   color: #ffffff;
 }
 .colored-label.label-white {
@@ -888,6 +998,22 @@
 }
 .alert.alert-dark-blue:hover {
   background: #284d5e;
+  color: #ffffff;
+}
+.alert.alert-light-green {
+  background: #59cab1;
+  color: #f2f2f2;
+}
+.alert.alert-light-green:hover {
+  background: #3ec1a4;
+  color: #ffffff;
+}
+.alert.alert-brown {
+  background: #b86b5a;
+  color: #f2f2f2;
+}
+.alert.alert-brown:hover {
+  background: #a75948;
   color: #ffffff;
 }
 .alert.alert-white {
@@ -1587,6 +1713,110 @@
   border: none;
   background-color: #284d5e;
 }
+.pagination.pagination-light-green > li > a,
+.pagination.pagination-light-green > li > span {
+  -webkit-transition: 0.5s color, 0.5s background-color;
+  -o-transition: 0.5s color, 0.5s background-color;
+  transition: 0.5s color, 0.5s background-color;
+  border: none;
+  padding: 3px 7px;
+  margin-right: 3px;
+  background-color: #59cab1;
+  color: #ffffff;
+}
+.pagination.pagination-light-green > li:last-child > a,
+.pagination.pagination-light-green > li:last-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.pagination.pagination-light-green > li:first-child > a,
+.pagination.pagination-light-green > li:first-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.pagination.pagination-light-green > .active > a,
+.pagination.pagination-light-green > .active > span,
+.pagination.pagination-light-green > .disabled > a,
+.pagination.pagination-light-green > .disabled > span {
+  border: none;
+  padding: 3px 7px;
+  line-height: 1.42857;
+  background-color: #3ec1a4;
+  color: #ffffff;
+}
+.pagination.pagination-light-green > .disabled > a,
+.pagination.pagination-light-green > .disabled > span {
+  cursor: disabled;
+  border: none;
+}
+.pagination.pagination-light-green > li a:hover,
+.pagination.pagination-light-green > li a:focus,
+.pagination.pagination-light-green > .active > a:hover,
+.pagination.pagination-light-green > .active > span:hover,
+.pagination.pagination-light-green > .active > a:focus,
+.pagination.pagination-light-green > .active > span:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 !important;
+  border: none;
+  background-color: #3ec1a4;
+}
+.pagination.pagination-brown > li > a,
+.pagination.pagination-brown > li > span {
+  -webkit-transition: 0.5s color, 0.5s background-color;
+  -o-transition: 0.5s color, 0.5s background-color;
+  transition: 0.5s color, 0.5s background-color;
+  border: none;
+  padding: 3px 7px;
+  margin-right: 3px;
+  background-color: #b86b5a;
+  color: #ffffff;
+}
+.pagination.pagination-brown > li:last-child > a,
+.pagination.pagination-brown > li:last-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.pagination.pagination-brown > li:first-child > a,
+.pagination.pagination-brown > li:first-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.pagination.pagination-brown > .active > a,
+.pagination.pagination-brown > .active > span,
+.pagination.pagination-brown > .disabled > a,
+.pagination.pagination-brown > .disabled > span {
+  border: none;
+  padding: 3px 7px;
+  line-height: 1.42857;
+  background-color: #a75948;
+  color: #ffffff;
+}
+.pagination.pagination-brown > .disabled > a,
+.pagination.pagination-brown > .disabled > span {
+  cursor: disabled;
+  border: none;
+}
+.pagination.pagination-brown > li a:hover,
+.pagination.pagination-brown > li a:focus,
+.pagination.pagination-brown > .active > a:hover,
+.pagination.pagination-brown > .active > span:hover,
+.pagination.pagination-brown > .active > a:focus,
+.pagination.pagination-brown > .active > span:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 !important;
+  border: none;
+  background-color: #a75948;
+}
 .pagination > li > a,
 .pagination > li > span {
   -webkit-transition: 0.5s color, 0.5s background-color;
@@ -1680,6 +1910,14 @@
 }
 .background-dark-blue {
   background: #336177;
+  color: #ffffff;
+}
+.background-light-green {
+  background: #59cab1;
+  color: #ffffff;
+}
+.background-brown {
+  background: #b86b5a;
   color: #ffffff;
 }
 .background-white {
