@@ -8,29 +8,29 @@
 @pagination-margin-right: 3px;
 @pagination-font-size: 0.8em;
 
-.ActiveAndDisabledPagination(@shadow-color, @background-color)
+.active-and-disable-pagination(@shadow-color, @background-color)
 {
     background-color: @background-color;
     border: 1px solid @background-color;
     -webkit-box-shadow: 0 1px @shadow-color;
     		box-shadow: 0 1px @shadow-color;
 }
-.PaginationTransition(@color-transition: 0.5s, @background-color-transition: 0.5s){
+.pagination-transition(@color-transition: 0.5s, @background-color-transition: 0.5s){
 	-webkit-transition: @color-transition color, @background-color-transition background-color;
 	-o-transition: 		@color-transition color, @background-color-transition background-color;
 	transition: 		@color-transition color, @background-color-transition background-color;
 }
 
-.PaginationShadow(@shadow) when(@use-shadow){
+.pagination-shadow(@shadow) when(@use-shadow){
 	-webkit-box-shadow: 0 1px @shadow;
 			box-shadow: 0 1px @shadow;
 }
 
-.PaginationBorder(@border-color) when(@use-border >= 1){
+.pagination-border(@border-color) when(@use-border >= 1){
 	border: 1px solid @border-color;
 }
 
-.PaginationBorder(@border-color, @background-color) when(@use-border <= 0){
+.pagination-border(@border-color, @background-color) when(@use-border <= 0){
 	border: none;
 }
 
@@ -51,9 +51,9 @@
 
 		&-@{name} > li > a,
 		&-@{name} > li > span{
-			.PaginationTransition;
-			.PaginationShadow(@shadow);
-			.PaginationBorder(@darken-background, @background);
+			.pagination-transition;
+			.pagination-shadow(@shadow);
+			.pagination-border(@darken-background, @background);
 			padding: @pagination-padding;
 			margin-right: @pagination-margin-right;
 			background-color: @background;
@@ -82,7 +82,7 @@
 		&-@{name} > .active > span,
 		&-@{name} > .disabled > a,
 		&-@{name} > .disabled > span {
-			.PaginationBorder(@darken-background, @background);
+			.pagination-border(@darken-background, @background);
 		    padding: @pagination-padding;
 		    line-height: @pagination-line-height;
 		    background-color: @darken-background;
@@ -92,7 +92,7 @@
 		&-@{name} > .disabled > a,
 		&-@{name} > .disabled > span{
 			cursor: disabled;
-			.PaginationBorder(@darken-background, @background);
+			.pagination-border(@darken-background, @background);
 		}
 
         &-@{name} > li a:hover,
@@ -101,9 +101,9 @@
         &-@{name} > .active > span:hover,
         &-@{name} > .active > a:focus,
         &-@{name} > .active > span:focus{
-        	.NoShadow;
-        	.NoOutline;
-        	.PaginationBorder(@darken-background, @background);
+        	.no-shadow;
+        	.no-outline;
+        	.pagination-border(@darken-background, @background);
         	background-color: @darken-background;
         }
     }
@@ -122,9 +122,9 @@
 
 		&-@{name} > li > a,
 		&-@{name} > li > span{
-			.PaginationTransition;
-			.PaginationShadow(@shadow);
-			.PaginationBorder(@darken-background, @background);
+			.pagination-transition;
+			.pagination-shadow(@shadow);
+			.pagination-border(@darken-background, @background);
 			padding: @pagination-padding;
 			margin-right: @pagination-margin-right;
 			background-color: @background;
@@ -151,7 +151,7 @@
 		&-@{name} > .active > span,
 		&-@{name} > .disabled > a,
 		&-@{name} > .disabled > span {
-			.PaginationBorder(@darken-background, @background);
+			.pagination-border(@darken-background, @background);
 		    padding: @pagination-padding;
 		    line-height: @pagination-line-height;
 		    background-color: @darken-background;
@@ -161,7 +161,7 @@
 		&-@{name} > .disabled > a,
 		&-@{name} > .disabled > span{
 			cursor: disabled;
-			.PaginationBorder(@darken-background, @background);
+			.pagination-border(@darken-background, @background);
 		}
 
         &-@{name} > li a:hover,
@@ -170,9 +170,9 @@
         &-@{name} > .active > span:hover,
         &-@{name} > .active > a:focus,
         &-@{name} > .active > span:focus{
-        	.NoShadow;
-        	.NoOutline;
-        	.PaginationBorder(@darken-background, @background);
+        	.no-shadow;
+        	.no-outline;
+        	.pagination-border(@darken-background, @background);
         	background-color: @darken-background;
         }
     }
@@ -180,9 +180,9 @@
 
 .pagination > li > a,
 .pagination > li > span{
-	.PaginationTransition;
-	.PaginationBorder(@white-darken-background-color, @white-background-color);
-	.PaginationShadow(@white-shadow-color);
+	.pagination-transition;
+	.pagination-border(@white-darken-background-color, @white-background-color);
+	.pagination-shadow(@white-shadow-color);
 	margin-right: 2px;
 	background-color: @white-background-color;
 	color: @lighten-dark-font;
@@ -209,7 +209,7 @@
 .pagination > .active > span,
 .pagination > .disabled > a,
 .pagination > .disabled > span {
-	.PaginationBorder(@white-darken-background-color, @white-background-color);
+	.pagination-border(@white-darken-background-color, @white-background-color);
     padding: @pagination-padding;
     line-height: @pagination-line-height;
     background-color: @white-darken-background-color;
@@ -217,7 +217,7 @@
 }
 .pagination > .disabled > a,
 .pagination > .disabled > span{
-	.PaginationBorder(@white-darken-background-color, @white-background-color);
+	.pagination-border(@white-darken-background-color, @white-background-color);
 }
 
 .pagination > li a:hover,
@@ -226,8 +226,8 @@
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus{
-	.NoShadow;
-	.NoOutline;
-	.PaginationBorder(@white-darken-background-color, @white-background-color);
+	.no-shadow;
+	.no-outline;
+	.pagination-border(@white-darken-background-color, @white-background-color);
 	background-color: @white-darken-background-color;
 }

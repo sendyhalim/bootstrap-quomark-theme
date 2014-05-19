@@ -16,23 +16,23 @@
 @btn-shadow-size: 0 1px;
 @btn-top-position-when-hovered: 1px;
 
-.BtnBehavior{
-	.NoOutline;
-	.NoBorder;
+.btn-behavior{
+	.no-outline;
+	.no-border;
 }
-.BtnTransition(@color-transition: 0.5s, @background-color-transition: 0.5s){
+.btn-transition(@color-transition: 0.5s, @background-color-transition: 0.5s){
 	-webkit-transition: @color-transition color, @background-color-transition background-color;
 	-o-transition: 		@color-transition color, @background-color-transition background-color;
 	transition: 		@color-transition color, @background-color-transition background-color;
 }
-.BtnShadow(@shadowColor, @shadow-size: @btn-shadow-size) when(@btn-shadow) {
-	.Shadow(@shadowColor, @shadow-size);
+.btn-shadow(@shadowColor, @shadow-size: @btn-shadow-size) when(@btn-shadow) {
+	.shadow(@shadowColor, @shadow-size);
 }
-.BtnPosition when(@btn-shadow){
+.btn-position when(@btn-shadow){
 	top: @btn-top-position-when-hovered;
 }
 .btn {
-    .BtnBehavior;
+    .btn-behavior;
 	margin-top: @button-margin-top;
 	margin-bottom: @btn-margin-bottom;
 	min-width: @btn-min-width;
@@ -49,10 +49,10 @@
 .btn.active,
 .open .dropdown-toggle.btn{
 	position: relative;
-	.BtnPosition;
-	.NoOutline;
-	.NoShadow;
-	.BtnTransition;
+	.btn-position;
+	.no-outline;
+	.no-shadow;
+	.btn-transition;
 }
 
 
@@ -63,14 +63,14 @@
         @shadow-color: "@{name}-shadow-color";
         @darken-background-color: "@{name}-darken-background-color";
         &-@{name} {
-        	.BtnShadow(@@shadow-color);
+        	.btn-shadow(@@shadow-color);
         	background: @@background-color;
         	color: @dark-font;
         }
         &-@{name}:hover,
         &-@{name}:focus,
         &-@{name}:active{
-        	.NoBorder;
+        	.no-border;
 			background-color: @@darken-background-color;
 			color: @dark-font;
         }
@@ -83,14 +83,14 @@
         @shadow-color: "@{name}-shadow-color";
         @darken-background-color: "@{name}-darken-background-color";
         &-@{name} {
-        	.BtnShadow(@@shadow-color);
+        	.btn-shadow(@@shadow-color);
         	background: @@background-color;
         	color: @light-font;
         }
         &-@{name}:hover,
         &-@{name}:focus,
         &-@{name}:active{
-        	.NoBorder;
+        	.no-border;
 			background-color: @@darken-background-color;
 			color: @light-font;
         }
@@ -104,7 +104,7 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.NoBorder;
+        	.no-border;
 			background-color: @@background-color;
 			color: @dark-font;
         }
@@ -115,7 +115,7 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.NoBorder;
+        	.no-border;
 			background-color: @@background-color;
 			color: @light-font;
         }

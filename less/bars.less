@@ -4,7 +4,7 @@
 @progress-bar-radius: 0;
 @progress-background-color: #EFFFEF;
 
-.ProgressBarShadow(@base-color) {
+.progress-bar-shadow(@base-color) {
 	-webkit-box-shadow: @progress-bar-shadow-size rgba(red(@base-color), green(@base-color), blue(@base-color), 0.3);
 			box-shadow: @progress-bar-shadow-size rgba(red(@base-color), green(@base-color), blue(@base-color), 0.3);
 }
@@ -25,7 +25,7 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.ProgressBarShadow(@@background-color);
+        	.progress-bar-shadow(@@background-color);
         	background: @@background-color;
         }
     }
@@ -35,7 +35,7 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.ProgressBarShadow(@@background-color);
+        	.progress-bar-shadow(@@background-color);
         	background: @@background-color;
         }
     }

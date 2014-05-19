@@ -1,16 +1,16 @@
 @import "generic.less";
 
-@modalBorderRadius: 0;
-@modalBorder: none;
+@modal-border-radius: 0;
+@modal-border: none;
 
-.Modal-footer-header-border-color(@backgroundColor){
+.modal-footer-header-border-color(@backgroundColor){
     border-color: darken(@backgroundColor, 3%);
 }
 
 .modal-content{
-	border: @modalBorder;
-	-webkit-border-radius: @modalBorderRadius;
-			border-radius: @modalBorderRadius;
+	border: @modal-border;
+	-webkit-border-radius: @modal-border-radius;
+			border-radius: @modal-border-radius;
 }
 .modal {
     .for(@background-colors-with-light-font); .-each(@color) {
@@ -24,11 +24,11 @@
         }
         &-content.modal-@{name} .modal-header{
 			border-bottom: 1px solid;
-            .Modal-footer-header-border-color(@background);
+            .modal-footer-header-border-color(@background);
         }
         &-content.modal-@{name} .modal-footer{
         	border-top: 1px solid;
-            .Modal-footer-header-border-color(@background);
+            .modal-footer-header-border-color(@background);
         }
     }
 }
@@ -45,11 +45,11 @@
         }
         &-content.modal-@{name} .modal-header{
 			border-bottom: 1px solid;
-            .Modal-footer-header-border-color(@background);
+            .modal-footer-header-border-color(@background);
         }
         &-content.modal-@{name} .modal-footer{
         	border-top: 1px solid;
-            .Modal-footer-header-border-color(@background);
+            .modal-footer-header-border-color(@background);
         }
     }
 }
