@@ -1,0 +1,33 @@
+{
+  "name": "quomark-theme",
+  "version": "0.0.0",
+  "description": "Theme for bootstrap that adds more colours and flatten bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sendyHalim/bootstrap-quomark-theme.git"
+  },
+  "keywords": [
+    "Bootstrap",
+    "Theme",
+    "Quomark",
+    "sendyhalim.com"
+  ],
+  "author": "sendy halim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sendyHalim/bootstrap-quomark-theme/issues"
+  },
+  "homepage": "https://github.com/sendyHalim/bootstrap-quomark-theme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-less": "^0.11.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-cssmin": "^0.9.0"
+  }
+}
