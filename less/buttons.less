@@ -4,20 +4,18 @@
  * BASIC BUTTON VARIABLES
  */
 @btn-shadow: false;
-
-@button-margin-top: 2px;
-@btn-margin-bottom: 2px;
-@btn-min-width: 34px;
-@btn-min-height: 28px;
-@btn-horizontal-padding: 8px;
-@btn-vertical-padding: 4px;
+@btn-horizontal-padding: 12px;
+@btn-vertical-padding: 6px;
 @btn-border-radius: 0;
 @btn-shadow-size: 0 1px;
 @btn-top-position-when-hovered: 1px;
 
-.btn-behavior{
+.btn-border-transparent {
+    border: 1px solid transparent;
+}
+.btn-behavior {
 	.no-outline;
-	.no-border;
+	.btn-border-transparent;
 }
 .btn-transition(@color-transition: 0.5s, @background-color-transition: 0.5s){
 	-webkit-transition: @color-transition color, @background-color-transition background-color;
@@ -32,10 +30,6 @@
 }
 .btn {
     .btn-behavior;
-	margin-top: @button-margin-top;
-	margin-bottom: @btn-margin-bottom;
-	min-width: @btn-min-width;
-	min-height: @btn-min-height;
 	padding: @btn-vertical-padding @btn-horizontal-padding;
     border-radius: @btn-border-radius;
     -webkit-border-radius: @btn-border-radius;
@@ -68,7 +62,7 @@
         &-@{name}:hover,
         &-@{name}:focus,
         &-@{name}:active{
-        	.no-border;
+        	.btn-border-transparent;
 			background-color: @@darken-background-color;
 			color: @dark-font;
         }
@@ -88,7 +82,7 @@
         &-@{name}:hover,
         &-@{name}:focus,
         &-@{name}:active{
-        	.no-border;
+        	.btn-border-transparent;
 			background-color: @@darken-background-color;
 			color: @light-font;
         }
@@ -102,7 +96,7 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.no-border;
+        	.btn-border-transparent;
 			background-color: @@background-color;
 			color: @dark-font;
         }
@@ -113,7 +107,7 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.no-border;
+        	.btn-border-transparent;
 			background-color: @@background-color;
 			color: @light-font;
         }
