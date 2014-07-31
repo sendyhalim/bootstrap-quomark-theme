@@ -6,16 +6,13 @@
 @btn-shadow: false;
 @btn-horizontal-padding: 12px;
 @btn-vertical-padding: 6px;
-@btn-border-radius: 0;
+@btn-border-radius: 2px;
 @btn-shadow-size: 0 1px;
 @btn-top-position-when-hovered: 1px;
+@btn-border-width: 2px;
 
-.btn-border-transparent {
-    border: 1px solid transparent;
-}
 .btn-behavior {
 	.no-outline;
-	.btn-border-transparent;
 }
 .btn-transition(@color-transition: 0.5s, @background-color-transition: 0.5s){
 	-webkit-transition: @color-transition color, @background-color-transition background-color;
@@ -29,10 +26,11 @@
 	top: @btn-top-position-when-hovered;
 }
 .btn {
-    .btn-behavior;
+    background-color: inherit;
 	padding: @btn-vertical-padding @btn-horizontal-padding;
     border-radius: @btn-border-radius;
     -webkit-border-radius: @btn-border-radius;
+    border-width: @btn-border-width;
 }
 
 .btn:hover,
@@ -56,13 +54,15 @@
         @darken-background-color: "@{name}-darken-background-color";
         &-@{name} {
         	.btn-shadow(@@shadow-color);
-        	background: @@background-color;
-        	color: @dark-font;
+        	// background: @@background-color;
+            border-color: @@background-color;
+        	color: @@background-color;
         }
         &-@{name}:hover,
         &-@{name}:focus,
         &-@{name}:active{
-        	.btn-border-transparent;
+        	border-width: @btn-border-width;
+            border-color: @@darken-background-color;
 			background-color: @@darken-background-color;
 			color: @dark-font;
         }
@@ -76,13 +76,15 @@
         @darken-background-color: "@{name}-darken-background-color";
         &-@{name} {
         	.btn-shadow(@@shadow-color);
-        	background: @@background-color;
-        	color: @light-font;
+        	// background: @@background-color;
+            border-color: @@background-color;
+        	color: @@background-color;
         }
         &-@{name}:hover,
         &-@{name}:focus,
         &-@{name}:active{
-        	.btn-border-transparent;
+        	border-width: @btn-border-width;
+            border-color: @@darken-background-color;
 			background-color: @@darken-background-color;
 			color: @light-font;
         }
@@ -96,7 +98,8 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.btn-border-transparent;
+        	border-width: @btn-border-width;
+            border-color: @@background-color;
 			background-color: @@background-color;
 			color: @dark-font;
         }
@@ -107,7 +110,8 @@
         @name: e(@color);
         @background-color: "@{name}-background-color";
         &-@{name} {
-        	.btn-border-transparent;
+        	border-width: @btn-border-width;
+            border-color: @@background-color;
 			background-color: @@background-color;
 			color: @light-font;
         }

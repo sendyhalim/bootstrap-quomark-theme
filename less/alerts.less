@@ -1,18 +1,20 @@
 @import "generic.less";
 
-@alert-border-radius: 0;
+@alert-border-radius: 3px;
+@alert-border-width: 2px;
 @alert-padding: 7px 15px;
+@alert-margin-bottom: 3px;
 @darken-when-hovered: false;
 
 .alert {
 	padding: @alert-padding;
-	margin-bottom: 0;
+	margin-bottom: @alert-margin-bottom;
 	-webkit-transition: 0.5s color, 0.5s background-color;
 	-o-transition: 		0.5s color, 0.5s background-color;
 	transition: 		0.5s color, 0.5s background-color;
     -webkit-border-radius: @alert-border-radius;
 			border-radius: @alert-border-radius;
-	border: none;
+	border-width: @alert-border-width;
 }
 .alert.alert {
     .for(@background-colors-with-light-font); .-each(@color) {
@@ -22,11 +24,13 @@
         @background: @@background-color;
         @darken-background: @@darken-background-color;
         &-@{name} {
-        	background: @background;
-        	color: @darken-light-font;
+        	border-color: @background;
+            background-color: inherit;
+        	color: @background;
         }
         &-@{name}:hover{
 			background: @darken-background;
+            border-color: @darken-background;
         	color: @light-font;
         }
     }
@@ -39,11 +43,13 @@
         @background: @@background-color;
         @darken-background: @@darken-background-color;
         &-@{name} {
-        	background: @background;
-        	color: @lighten-dark-font;
+        	border-color: @background;
+            background-color: inherit;
+        	color: @background;
         }
         &-@{name}:hover{
 			background: @darken-background;
+            border-color: @darken-background;
         	color: @dark-font;
         }
     }
